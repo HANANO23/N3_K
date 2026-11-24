@@ -1,0 +1,3122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JLPT N3 경어 · 지시어 · 부사 발음 &amp; 문법 자가학습기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #ffffff;
+      --surface-2: #fbfaf7;
+      --surface-3: #efeae0;
+      --accent-wash: #eef3fb;
+      --text: #141923;
+      --muted: #526074;
+      --border: #e1dbd0;
+      --border-strong: #c9c0b1;
+      --primary: #1e4fd8;
+      --primary-hover: #173fb0;
+      --primary-soft: rgba(30, 79, 216, 0.1);
+      --primary-ring: rgba(30, 79, 216, 0.24);
+      --accent-vermilion: #c2410c;
+      --accent-vermilion-soft: rgba(194, 65, 12, 0.1);
+      --success: #15803d;
+      --success-bg: rgba(21, 128, 61, 0.11);
+      --success-border: rgba(21, 128, 61, 0.35);
+      --danger: #b91c1c;
+      --danger-bg: rgba(185, 28, 28, 0.11);
+      --danger-border: rgba(185, 28, 28, 0.35);
+      --warn: #b45309;
+      --warn-bg: rgba(180, 83, 9, 0.12);
+      --warn-border: rgba(180, 83, 9, 0.36);
+      --shadow: 0 10px 28px rgba(20, 25, 35, 0.06);
+      --shadow-sm: 0 2px 8px rgba(20, 25, 35, 0.04);
+      --radius: 16px;
+      --radius-sm: 11px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0c1220;
+      --surface: #131c31;
+      --surface-2: #18233c;
+      --surface-3: #213050;
+      --accent-wash: #1a2947;
+      --text: #f3f6fb;
+      --muted: #9fb0c7;
+      --border: #263554;
+      --border-strong: #374b75;
+      --primary: #4f86f7;
+      --primary-hover: #73a1ff;
+      --primary-soft: rgba(79, 134, 247, 0.16);
+      --primary-ring: rgba(79, 134, 247, 0.3);
+      --accent-vermilion: #fb923c;
+      --accent-vermilion-soft: rgba(251, 146, 60, 0.14);
+      --success: #4ade80;
+      --success-bg: rgba(74, 222, 128, 0.14);
+      --success-border: rgba(74, 222, 128, 0.35);
+      --danger: #f87171;
+      --danger-bg: rgba(248, 113, 113, 0.14);
+      --danger-border: rgba(248, 113, 113, 0.35);
+      --warn: #fbbf24;
+      --warn-bg: rgba(251, 191, 36, 0.14);
+      --warn-border: rgba(251, 191, 36, 0.35);
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.42);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      background:
+        radial-gradient(circle at top right, var(--primary-soft), transparent 42%),
+        radial-gradient(circle at bottom left, var(--accent-vermilion-soft), transparent 38%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.68;
+      padding: 18px 14px 72px;
+      overflow-x: hidden;
+      transition: background 0.22s ease, color 0.22s ease;
+    }
+
+    .jp {
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      overflow-wrap: break-word;
+      word-break: normal;
+    }
+
+    .wrap {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      min-width: 0;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px 22px;
+      margin-bottom: 16px;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: keep-all;
+    }
+
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent-vermilion);
+      background: var(--accent-vermilion-soft);
+      padding: 3px 9px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    .top-bar h1 {
+      margin: 0;
+      font-size: clamp(1.26rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .top-bar p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    button,
+    label.btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-height: 44px;
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.2;
+      cursor: pointer;
+      border: 1px solid transparent;
+      box-shadow: var(--shadow-sm);
+      transition: background-color 0.16s ease, border-color 0.16s ease, transform 0.12s ease, box-shadow 0.16s ease;
+      user-select: none;
+    }
+
+    button:active,
+    label.btn-secondary:active {
+      transform: scale(0.99);
+    }
+
+    button:focus-visible,
+    label.btn-secondary:focus-visible,
+    select:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-ring);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background: var(--surface-2);
+      color: var(--text);
+      border-color: var(--border-strong);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-3);
+    }
+
+    .btn-success {
+      background: var(--success-bg);
+      color: var(--success);
+      border-color: var(--success-border);
+    }
+
+    .btn-danger {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border-color: var(--danger-border);
+    }
+
+    .btn-sm {
+      min-height: 44px;
+      padding: 7px 12px;
+      font-size: 0.83rem;
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 640px) {
+      .stats-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      body {
+        padding: 10px 10px 76px;
+        line-height: 1.72;
+      }
+      .card {
+        padding: 15px 14px;
+        border-radius: 14px;
+      }
+      .prompt-box {
+        padding: 14px 13px !important;
+      }
+      .prompt-jp {
+        font-size: 1.18rem !important;
+        line-height: 1.72 !important;
+      }
+      .prompt-kr {
+        font-size: 0.98rem !important;
+        line-height: 1.66 !important;
+      }
+      .detail-section {
+        padding: 13px 12px !important;
+      }
+      .vocab-list {
+        grid-template-columns: 1fr !important;
+      }
+      .vocab-struct-row {
+        flex-direction: column !important;
+        gap: 3px !important;
+      }
+      .nav-bar {
+        flex-direction: column;
+      }
+    }
+
+    .stat-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      text-align: center;
+      min-width: 0;
+    }
+
+    .stat-card .lbl {
+      display: block;
+      font-size: 0.76rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .stat-card .val {
+      display: block;
+      font-size: 1.12rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .progress-track {
+      height: 8px;
+      background: var(--surface-3);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--accent-vermilion));
+      border-radius: 999px;
+      transition: width 0.28s ease;
+    }
+
+    .filter-bar {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.35fr) minmax(0, 1.3fr) auto;
+      gap: 9px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 780px) {
+      .filter-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .filter-bar .search-col {
+        grid-column: 1 / -1;
+      }
+      .filter-bar .rand-col {
+        grid-column: 1 / -1;
+      }
+    }
+
+    select,
+    input[type="text"],
+    textarea {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    select {
+      min-height: 44px;
+    }
+
+    input[type="text"] {
+      min-height: 44px;
+    }
+
+    select:focus,
+    input[type="text"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-ring);
+    }
+
+    .q-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .cat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--accent-vermilion-soft);
+      color: var(--accent-vermilion);
+      border: 1px solid rgba(194, 65, 12, 0.24);
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .grammar-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border: 1px solid rgba(30, 79, 216, 0.22);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      max-width: 100%;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-2);
+      color: var(--muted);
+    }
+
+    .status-pill.ok {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success);
+    }
+
+    .status-pill.bad {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+      color: var(--danger);
+    }
+
+    .prompt-box {
+      background: linear-gradient(180deg, var(--surface-2), var(--accent-wash));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 18px 16px;
+      margin-bottom: 16px;
+    }
+
+    .prompt-jp {
+      font-size: 1.38rem;
+      font-weight: 700;
+      line-height: 1.68;
+      margin-bottom: 10px;
+      color: var(--text);
+      white-space: pre-line;
+    }
+
+    .prompt-kr {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-strong);
+      white-space: pre-line;
+    }
+
+    .prompt-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 9px;
+    }
+
+    .prompt-sub {
+      display: inline-block;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 3px 9px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .prompt-year {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      padding: 3px 9px;
+      background: var(--primary-soft);
+      border: 1px solid rgba(30, 79, 216, 0.22);
+      border-radius: 8px;
+    }
+
+    .quick-marks {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 9px;
+    }
+
+    .quick-mark-btn {
+      min-height: 38px;
+      padding: 5px 11px;
+      font-size: 0.88rem;
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+      border-radius: 9px;
+      box-shadow: none;
+    }
+
+    .quick-mark-btn:hover {
+      background: var(--surface-3);
+    }
+
+    textarea.pron-input {
+      min-height: 92px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    .action-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .action-bar .btn-primary {
+      flex: 1 1 190px;
+      min-height: 46px;
+      padding: 11px 18px;
+      font-size: 0.98rem;
+    }
+
+    .result-box {
+      margin-top: 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-2);
+      padding: 18px 16px;
+    }
+
+    .verdict-banner {
+      border-radius: var(--radius-sm);
+      padding: 13px 15px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .verdict-banner.match {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success);
+    }
+
+    .verdict-banner.mismatch {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+      color: var(--danger);
+    }
+
+    .verdict-banner.revealed {
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+      color: var(--warn);
+    }
+
+    .verdict-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .compare-line {
+      font-size: 0.93rem;
+      color: var(--text);
+      margin-top: 5px;
+      overflow-wrap: anywhere;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+
+    .self-grade-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 11px 13px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .self-grade-bar span {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-right: auto;
+    }
+
+    .detail-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 15px 16px;
+      margin-top: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-section:nth-of-type(2) {
+      border-left-color: var(--accent-vermilion);
+    }
+
+    .detail-section:nth-of-type(3) {
+      border-left-color: var(--success);
+    }
+
+    .detail-section h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.45;
+    }
+
+    .detail-block {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 13px;
+      margin-bottom: 10px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      line-height: 1.72;
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .detail-muted {
+      font-size: 0.91rem;
+      line-height: 1.76;
+      color: var(--text);
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+      margin-bottom: 10px;
+    }
+
+    .tip-box {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 10px 13px;
+      font-size: 0.88rem;
+      line-height: 1.68;
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .conn-rule-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .conn-rule-row {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .conn-rule-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pos-chip {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border: 1px solid rgba(30, 79, 216, 0.22);
+    }
+
+    .pos-chip.adj-i {
+      background: var(--accent-vermilion-soft);
+      color: var(--accent-vermilion);
+      border-color: rgba(194, 65, 12, 0.24);
+    }
+
+    .pos-chip.adj-na {
+      background: var(--warn-bg);
+      color: var(--warn);
+      border-color: var(--warn-border);
+    }
+
+    .pos-chip.noun {
+      background: var(--success-bg);
+      color: var(--success);
+      border-color: var(--success-border);
+    }
+
+    .conn-rule-body {
+      font-size: 0.91rem;
+      line-height: 1.68;
+      color: var(--text);
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .vocab-section-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .vocab-section-head h3 {
+      margin: 0 !important;
+    }
+
+    .vocab-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .vocab-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .vocab-item {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .vocab-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 6px;
+      padding-bottom: 7px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .vocab-item .v-jp {
+      font-weight: 800;
+      font-size: 1.12rem;
+      color: var(--text);
+    }
+
+    .vocab-item .v-rd {
+      font-size: 0.83rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .vocab-item .v-kr {
+      font-size: 0.94rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .vocab-struct-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 9px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 0.84rem;
+    }
+
+    .vocab-struct-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.55;
+    }
+
+    .vocab-struct-tag {
+      flex: 0 0 auto;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      margin-top: 1px;
+    }
+
+    .vocab-struct-tag.side {
+      background: var(--surface-3);
+      color: var(--text);
+    }
+
+    .vocab-struct-text {
+      flex: 1;
+      min-width: 0;
+      color: var(--muted);
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .vocab-mnemonic-box {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .vocab-mnemonic-caption {
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .vocab-mnemonic-label {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--warn);
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      padding: 2px 7px;
+      border-radius: 6px;
+      margin-bottom: 4px;
+    }
+
+    .vocab-mnemonic-story {
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+      line-height: 1.68;
+    }
+
+    .hidden-mnemonics .vocab-mnemonic-box {
+      display: none !important;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .nav-bar button {
+      flex: 1;
+      min-height: 46px;
+      padding: 11px 16px;
+      font-size: 0.95rem;
+    }
+
+    .shortcut-note {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-size: 0.79rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      max-width: calc(100vw - 24px);
+      text-align: center;
+      transform: translateX(-50%) translateY(16px);
+      background: var(--text);
+      color: var(--surface);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 100;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="card">
+      <div class="top-bar">
+        <div>
+          <span class="brand-eyebrow">JLPT N3 · KEIGO · DEMONSTRATIVES · ADVERBS</span>
+          <h1>JLPT N3 경어 · 지시어 · 부사 발음 &amp; 문법 자가학습기</h1>
+          <p>일본어 문장과 (한글 뜻)을 보고 올바른 발음을 입력해 보세요. (존경어 · 겸양어 · 정중어 · 지시어 · 부사 60항목 수록)</p>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn-secondary btn-sm" id="themeBtn">다크 모드</button>
+          <button type="button" class="btn-secondary btn-sm" id="exportBtn">기록 내보내기</button>
+          <label class="btn-secondary btn-sm" for="importFile" style="margin:0;cursor:pointer;">기록 가져오기</label>
+          <input type="file" id="importFile" accept=".json,application/json" class="hidden" />
+          <button type="button" class="btn-danger btn-sm" id="resetBtn">기록 초기화</button>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-card">
+          <span class="lbl">학습 완료</span>
+          <span class="val" id="statDone">0 / 0</span>
+        </div>
+        <div class="stat-card">
+          <span class="lbl">정답</span>
+          <span class="val" id="statOk" style="color:var(--success)">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="lbl">오답 복습 대상</span>
+          <span class="val" id="statBad" style="color:var(--danger)">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="lbl">현재 범위 문항</span>
+          <span class="val" id="statScope">0개</span>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="filter-bar">
+        <select id="scopeSelect" aria-label="파트 및 복습 모드 선택">
+          <option value="all">전체 문항 (1~5파트 전체)</option>
+          <option value="1. 존경어">1. 존경어 (11항목)</option>
+          <option value="2. 겸양어">2. 겸양어 (13항목)</option>
+          <option value="3. 정중어">3. 정중어 (2항목)</option>
+          <option value="4. 지시어">4. 지시어 (13항목)</option>
+          <option value="5. 부사">5. 부사 (21항목)</option>
+          <option value="wrong">오답 복습 모드</option>
+          <option value="unsolved">미학습 문항만</option>
+        </select>
+
+        <select id="questionSelect" aria-label="문항 선택"></select>
+
+        <div class="search-col">
+          <input type="text" id="searchInput" placeholder="표현, 히라가나, 한글 발음, 뜻, 기출연도 검색..." />
+        </div>
+
+        <div class="rand-col">
+          <button type="button" class="btn-secondary" id="randomBtn" style="width:100%">랜덤 문항</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="q-header">
+        <div class="btn-row">
+          <span class="cat-pill" id="catBadge"></span>
+          <span class="grammar-pill" id="grammarBadge"></span>
+          <span id="posIndexText" style="font-size:0.84rem;color:var(--muted);font-weight:700;"></span>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn-secondary btn-sm" id="speakBtn">예문 발음 듣기</button>
+          <span class="status-pill" id="statusBadge">미학습</span>
+        </div>
+      </div>
+
+      <section class="prompt-box">
+        <div class="prompt-jp jp" id="promptJp"></div>
+        <div class="prompt-kr" id="promptKr"></div>
+        <div class="prompt-meta-row">
+          <span class="prompt-sub" id="promptHint"></span>
+          <span class="prompt-year hidden" id="promptYear"></span>
+        </div>
+      </section>
+
+      <div class="quick-marks" aria-label="장음 및 발음 기호 입력">
+        <span style="font-size:0.78rem;color:var(--muted);align-self:center;margin-right:2px;">기호 넣기:</span>
+        <button type="button" class="quick-mark-btn" data-char="-">-</button>
+        <button type="button" class="quick-mark-btn" data-char="ー">ー</button>
+        <button type="button" class="quick-mark-btn" data-char="～">～</button>
+        <button type="button" class="quick-mark-btn" data-char="っ">っ</button>
+      </div>
+
+      <textarea
+        id="pronInput"
+        class="pron-input"
+        placeholder="올바른 발음을 입력하세요 (한글 발음 또는 히라가나 모두 채점 지원 · 띄어쓰기·장음 생략 가능)"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+      ></textarea>
+
+      <div class="action-bar">
+        <button type="button" class="btn-primary" id="gradeBtn">발음 채점 및 해설 보기</button>
+        <button type="button" class="btn-secondary" id="revealBtn">정답 · 해설 바로 보기</button>
+        <button type="button" class="btn-secondary" id="clearBtn">입력 지우기</button>
+      </div>
+
+      <section id="resultBox" class="result-box hidden" aria-live="polite">
+        <div id="verdictBanner" class="verdict-banner">
+          <div class="verdict-title" id="verdictTitle"></div>
+          <div class="compare-line jp" id="refHiraLine"></div>
+          <div class="compare-line" id="refPronLine"></div>
+          <div class="compare-line" id="userPronLine"></div>
+        </div>
+
+        <div class="self-grade-bar">
+          <span>자가 채점 반영:</span>
+          <button type="button" class="btn-success btn-sm" id="markCorrectBtn">정답 처리</button>
+          <button type="button" class="btn-danger btn-sm" id="markWrongBtn">오답 처리 (오답 복습 추가)</button>
+        </div>
+
+        <div class="detail-section">
+          <h3>1. 문법 · 어휘 내용 및 의미 · 뉘앙스</h3>
+          <div class="detail-block" id="expGrammarMeaning"></div>
+          <div class="detail-muted" id="expExtraNotes"></div>
+          <div class="tip-box" id="expMemoryTip"></div>
+        </div>
+
+        <div class="detail-section">
+          <h3>2. 접속 및 품사 변형 규칙</h3>
+          <div id="expConnection"></div>
+          <div class="detail-muted" id="expInflection"></div>
+        </div>
+
+        <div class="detail-section">
+          <div class="vocab-section-head">
+            <h3>3. 문장 속 주요 일본어 단어 및 표현 뜻 (한자 핵심·좌우 분석 · 한자연상)</h3>
+            <button type="button" class="btn-secondary btn-sm" id="toggleMnemonicBtn">한자연상 연상기억 숨기기</button>
+          </div>
+          <div class="vocab-list" id="expVocabList"></div>
+        </div>
+      </section>
+
+      <div class="nav-bar">
+        <button type="button" class="btn-secondary" id="prevBtn">← 이전 문항 (←)</button>
+        <button type="button" class="btn-primary" id="nextBtn">다음 문항 (→)</button>
+      </div>
+
+      <div class="shortcut-note">
+        단축키: 입력창에서 <strong>Enter</strong>(줄바꿈 없이 채점) / <strong>Shift+Enter</strong>(줄바꿈) · 입력창 밖에서 <strong>Space</strong>(해설 열기/닫기), <strong>← / →</strong>(문항 이동) · 문장 더블클릭으로 발음 듣기
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const RAW_DATA = `
+[1. 존경어]
+
+1. いらっしゃる (계시다, 오시다, 가시다)
+- 明日の午後は研究室にいらっしゃいますか。
+  (あしたのごごはけんきゅうしつにいらっしゃいますか。)
+  [아시타노 고고와 켄큐우시츠니 이랏샤이마스카]
+  내일 오후에는 연구실에 계십니까? [2015-1회]
+- 森先生はいらっしゃいますか。
+  (もりせんせいはいらっしゃいますか。)
+  [모리센세이와 이랏샤이마스카]
+  모리 선생님은 계십니까? [2020]
+
+2. おっしゃる (말씀하시다)
+- ご希望のサイズのものが見つからなければ、おっしゃってください。
+  (ごきぼうのサイズのものがみつからなければ、おっしゃってください。)
+  [고키보오노 사이즈노 모노가 미츠카라나케레바, 옷샷테 쿠다사이]
+  희망하시는 사이즈의 물건을 찾지 못하신다면 말씀해 주세요. [2016-1회]
+- ご両親は何とおっしゃいましたか。
+  (ごりょうしんはなんとおっしゃいましたか。)
+  [고료오신와 난토 옷샤이마시타카]
+  부모님은 뭐라고 말씀하셨습니까? [2019-1회]
+
+3. くださる (주시다)
+- 社長はアルバイトの私たちにも出張のお土産をくださいます。
+  (しゃちょうはアルバイトのわたしたちにもしゅっちょうのおみやげをくださいます。)
+  [샤쵸오와 아루바이토노 와타시타치니모 슛쵸오노 오미야게오 쿠다사이마스]
+  사장님은 아르바이트인 우리들에게도 출장 선물을 주십니다. [2019-1회]
+
+4. ご存知だ (ごぞんじだ / 알고 계시다)
+- インターネットに40年以上の歴史があることをご存知ですか。
+  (インターネットに40ねんいじょうのれきしがあることをごぞんじですか。)
+  [인타아넷토니 욘쥬우넨 이죠오노 레키시가 아루 코토오 고존지데스카]
+  인터넷에 40년 이상의 역사가 있는 것을 알고 계십니까? [2014-2회]
+
+5. なさる (하시다)
+- AセットとBセットのどちらになさいますか。
+  (AセットとBセットのどちらになさいますか。)
+  [에이셋토토 비이셋토노 도치라니 나사이마스카]
+  A세트와 B세트 중 어느 쪽으로 하시겠습니까? [2018-1회]
+
+6. めしあがる (많이 드시다)
+- どうぞたくさんめしあがってください。
+  (どうぞたくさんめしあがってください。)
+  [도오조 타쿠상 메시아가앗테 쿠다사이]
+  많이 드십시오. [2024-3회]
+
+7. お／ご〜ください (~해 주십시오)
+- そちらのいすにおかけになってお待ちください。
+  (そちらのいすにおかけになっておまちください。)
+  [소치라노 이스니 오카케니 낫테 오마치 쿠다사이]
+  그쪽에 있는 의자에 앉아서 기다려 주세요. [2013-1회]
+- 確認しますので、少々お待ちください。
+  (かくにんしますので、しょうしょうおまちください。)
+  [카쿠닌시마스노데, 쇼오쇼오 오마치 쿠다사이]
+  확인할 테니, 잠시 기다려 주십시오. [2016-2회]
+
+8. お／ご〜になる (~하시다)
+- そちらのいすにおかけになってお待ちください。
+  (そちらのいすにおかけになっておまちください。)
+  [소치라노 이스니 오카케니 낫테 오마치 쿠다사이]
+  그쪽에 있는 의자에 앉아서 기다려 주세요. [2013-1회]
+- 市民の方であれば、どなたでも無料でご参加になれます。
+  (しみんのかたであれば、どなたでもむりょうでごさんかになれます。)
+  [시민노 카타데 아레바, 도나타데모 무료오데 고산카니 나레마스]
+  시민이라면 누구나 무료로 참가하실 수 있습니다. [2025-1회]
+
+9. ご覧になる (ごらんになる / 보시다), ご覧の〜 (ごらんの〜 / 보시는~)
+- 先生が西田さんの論文がのっている雑誌をご覧になって、
+  (せんせいがにしださんのろんぶんがのっているざっしをごらんになって、)
+  [센세이가 니시다산노 론분가 놋테이루 잣시오 고란니 낫테]
+  선생님이 니시다 씨의 논문이 실려 있는 잡지를 보시고 [2012-2회]
+- ご覧のスポンサーの提供でお送りしました。
+  (ごらんのスポンサーのていきょうでおおくりしました。)
+  [고란노 스폰사아노 테이쿄오데 오오쿠리시마시타]
+  보시는 스폰서의 제공으로 보내드렸습니다.
+
+10. 〜ていらっしゃる (~하고 계시다)
+- 今、ほかの学生と話していらっしゃいますから少し待ってください。
+  (いま、ほかのがくせいとはなしていらっしゃいますからすこしまってください。)
+  [이마, 호카노 가쿠세이토 하나시테 이랏샤이마스카라 스코시 맛테 쿠다사이]
+  지금 다른 학생과 이야기하고 계시니까 잠시 기다려주세요. [2010-1회]
+
+11. 〜てくださる (~해 주시다), 〜ていただけませんか (~해 주시지 않겠습니까)
+- 先生がパーティーに納豆を持ってきてくださった。
+  (せんせいがパーティーになっとうをもってきてくださった。)
+  [센세이가 파아티이니 낫토오오 못테키테 쿠다삿타]
+  선생님이 파티에 낫토를 가지고 와 주셨다. [2013-1회]
+- おすすめの場所はありますか。もしあったら、教えていただけませんか。
+  (おすすめのばしょはありますか。もしあったら、おしえていただけませんか。)
+  [오스스메노 바쇼와 아리마스카. 모시 앗타라, 오시에테 이타다케마센카]
+  추천하시는 곳은 있습니까? 만약 있다면 가르쳐 주시지 않겠습니까? [2013-2회]
+
+
+[2. 겸양어]
+
+1. いただく (받다, 먹다, 마시다)
+- 昨日いただいたお土産のチョコレート、とてもおいしかったです。
+  (きのういただいたおみやげのチョコレート、とてもおいしかったです。)
+  [키노오 이타다이타 오미야게노 쵸코레에토, 토테모 오이시캇타데스]
+  어제 받은 초콜릿 선물, 아주 맛있었습니다. [2017-2회]
+- おいしい物をたくさんいただきました。
+  (おいしいものをたくさんいただきました。)
+  [오이시이 모노오 타쿠상 이타다키마시타]
+  맛있는 것을 많이 먹었습니다. [2021-1회]
+
+2. 伺う (うかがう / 듣다, 여쭙다, 방문하다)
+- 授業の後、先生の研究室にうかがってもよろしいでしょうか。
+  (じゅぎょうのあと、せんせいのけんきゅうしつにうかがってもよろしいでしょうか。)
+  [쥬교오노 아토, 센세이노 켄큐우시츠니 우카갓테모 요로시이데쇼오카]
+  수업 후에 선생님의 연구실로 찾아뵈어도 될까요? [2011-1회]
+- そちらのアルバイトの募集についてちょっと伺いたいんですが。
+  (そちらのアルバイトのぼしゅうについてちょっとうかがいたいんですが。)
+  [소치라노 아루바이토노 보슈우니 츠이테 춋토 우카가이타인데스가]
+  그쪽의 아르바이트 모집에 대해서 좀 여쭙고 싶은데요. [2013-2회]
+
+3. お目にかかる (おめにかかる / 만나 뵙다)
+- 私もこのパーティーで先生にお目にかかるとは思いませんでした。
+  (わたしもこのパーティーでせんせいにおめにかかるとはおもいませんでした。)
+  [와타시모 코노 파아티이데 센세이니 오메니 카카루토와 오모이마센데시타]
+  저도 이 파티에서 선생님을 만나 뵐 거라고는 생각하지 못했습니다. [2011-2회]
+- 山下課長にしかお目にかかったことがございませんので
+  (やましたかちょうにしかおめにかかったことがございませんので)
+  [야마시타 카쵸오니시카 오메니 카캇타 코토가 고자이마센노데]
+  야마시타 과장님밖에 뵌 적이 없기 때문에 [2021-1회]
+
+4. おる (있다)
+- はい、中川がおりますので、今、代わります。
+  (はい、なかがわおりますので、いま、かわります。)
+  [하이, 나카가와가 오리마스노데, 이마, 카와리마스]
+  네, 나카가와가 있으니 지금 바꿔드리겠습니다. [2022-2회]
+
+5. さしあげる (드리다)
+- 先生にプレゼントを用意して、最後の授業の日にさしあげる計画を立てています。
+  (せんせいにプレゼントをよういして、さいごのじゅぎょうのひにさしあげるけいかくをたてています。)
+  [센세이니 푸레젠토오 요오이시테, 사이고노 쥬교오노 히니 사시아게루 케이카쿠오 타테테 이마스]
+  선생님께 선물은 준비해서, 마지막 수업 날에 드릴 계획을 세우고 있습니다. [2011-2회]
+
+6. お／ご〜いたす (~하다, ~해 드리다)
+- 駅までお送りいたします。
+  (えきまでおおくりいたします。)
+  [에키마데 오오쿠리 이타시마스]
+  역까지 배웅해 드리겠습니다. [2010-2회]
+- お席にご案内いたします。
+  (おせきにごあんないいたします。)
+  [오세키니 고안나이 이타시마스]
+  자리로 안내해 드리겠습니다. [2024-1회]
+
+7. お／ご〜する (~하다, ~해 드리다)
+- 先生、この本をあさってまでお借りしてもよろしいでしょうか。
+  (せんせい、このほんをあさってまでおかりしてもよろしいでしょうか。)
+  [센세이, 코노 혼오 아삿테마데 오카리시테모 요로시이데쇼오카]
+  선생님, 이 책을 모레까지 빌려도 될까요?
+- 先生、私が荷物をお持ちします。
+  (せんせい、わたしがにもつをおもちします。)
+  [센세이, 와타시가 니모츠오 오모치시마스]
+  선생님, 제가 짐을 들어 드리겠습니다.
+
+8. 〜(さ)せていただく (~하다)
+- 一度そちらの練習を見学させていただけませんか。
+  (いちどそちらのれんしゅうをけんがくさせていただけませんか。)
+  [이치도 소치라노 렌슈우오 켄가쿠사세테 이타다케마센카]
+  한번 그쪽의 연습을 견학할 수 없을까요? [2013-1회]
+- 今日はすてきなプレゼントをありがとうございました。大切に使わせていただきます。
+  (きょうはすてきなプレゼントをありがとうございました。たいせつにつかわせていただきます。)
+  [쿄오와 스테키나 푸레젠토오 아리가토오 고자이마시타. 타이세츠니 츠카와세테 이타다키마스]
+  오늘은 멋진 선물 감사했습니다. 소중하게 쓰겠습니다. [2016-1회]
+- 資料をコピーさせていただけませんか。
+  (しりょうをコピーさせていただけませんか。)
+  [시료오오 코피이사세테 이타다케마센카]
+  자료를 복사할 수 없을까요? [2018-1회]
+
+9. 〜ていただく ((〜에게) ~해 받다, (〜가) ~해 주다)
+- 石田先生に貸していただいた本を家に忘れてきてしまって……。
+  (いしだせんせいにかしていただいたほんをいえにわすれてきてしまって……。)
+  [이시다 센세이니 카시테 이타다이타 혼오 이에니 와스레테키테 시맛테...]
+  이시다 선생님이 빌려 주신 책을 집에 두고 와버려서…. [2012-2회]
+
+10. 〜ていただけませんか (~해 주시지 않겠습니까)
+- すみませんが、写真を撮っていただけませんか。
+  (すみませんが、しゃしんをとっていただけませんか。)
+  [스미마센가, 샤신오 톳테 이타다케마센카]
+  죄송합니다만, 사진을 찍어 주시지 않겠습니까? [2010-1회]
+- 10時に予約した田中と申しますが、11時に変えていただけないでしょうか。
+  (10じによやくしたたなかともうしますが、11じにかえていただけないでしょうか。)
+  [쥬우지니 요야쿠시타 타나카토 모오시마스가, 쥬우이치지니 카에테 이타다케나이데쇼오카]
+  10시에 예약한 다나카라고 하는데, 11시로 바꿔 주실 수 있을까요? [2021-2회]
+- すみません。ペンを貸していただけませんか。
+  (すみません。ペンをかしていただけませんか。)
+  [스미마센. 펜오 카시테 이타다케마센카]
+  죄송합니다. 펜을 빌려 주시겠어요? [2024-2회]
+
+11. 〜と申す (〜と もうす / ~라고 하다)
+- ABC銀行の林と申しますが、山石さんをお願いします。
+  (ABCぎんこうのはやしともうしますが、やまいしさんをおねがいします。)
+  [에이비이시이 긴코오노 하야시토 모오시마스가, 야마이시산오 오네가이시마스]
+  ABC은행의 하야시라고 합니다만, 야마이시 씨를 부탁합니다.
+
+12. 拝見する (はいけんする / 보다)
+- お送りいただいた写真を拝見しました。
+  (おおくりいただいたしゃしんをはいけんしました。)
+  [오오쿠리 이타다이타 샤신오 하이켄시마시타]
+  보내주신 사진을 봤습니다.
+
+13. 参る (まいる / 가다, 오다)
+- まもなく電車が参ります。
+  (まもなくでんしゃがまいります。)
+  [마모나쿠 덴샤가 마이리마스]
+  곧 전철이 옵니다.
+- ただいま参りますので、少々お待ちください。
+  (ただいままいりますので、しょうしょうおまちください。)
+  [타다이마 마이리마스노데, 쇼오쇼오 오마치 쿠다사이]
+  지금 곧 갈 테니 조금 기다려 주십시오.
+
+
+[3. 정중어]
+
+1. ございます (있습니다)
+- 客「すみません。お手洗いはどこですか。」
+  店員「あちらのエレベーターの横にございます。」
+  (きゃく「すみません。おてあらいはどこですか。」／てんいん「あちらのエレベーターのよこにございます。」)
+  [캬쿠 "스미마센. 오테아라이와 도코데스카" / 텐인 "아치라노 에레베에타아노 요코니 고자이마스"]
+  손님 "실례합니다. 화장실은 어디예요?" / 점원 "저쪽의 엘리베이터 옆에 있습니다." [2015-2회]
+- お送りいただいた資料に間違いはございません。
+  (おおくりいただいたしりょうにまちがいはございません。)
+  [오오쿠리 이타다이타 시료오니 마치가이와 고자이마센]
+  보내주신 자료에 오류는 없습니다.
+
+2. 〜でございます (~입니다)
+- 店員「お電話ありがとうございます。さくら美容院でございます。」
+  客「すみません。今日予約したいんですが。」
+  (てんいん「おでんわありがとうございます。さくらびよういんでございます。」／きゃく「すみません。きょうよやくしたいんですが。」)
+  [텐인 "오덴와 아리가토오 고자이마스. 사쿠라 비요오인데 고자이마스" / 캬쿠 "스미마센. 쿄오 요야쿠시타인데스가"]
+  점원 "전화 감사합니다. 사쿠라 미용실입니다." / 손님 "실례합니다. 오늘 예약하고 싶은데요." [2017-2회]
+- 客「すみません。子供服の売り場は何階ですか。」
+  店員「5階でございます。」
+  (きゃく「すみません。こどもふくのうりばはなんがいですか。」／てんいん「5かいでございます。」)
+  [캬쿠 "스미마센. 코도모후쿠노 우리바와 난가이데스카" / 텐인 "고카이데 고자이마스"]
+  손님 "실례합니다. 아동복 매장은 몇 층입니까?" / 점원 "5층입니다." [2023-2회]
+
+
+[4. 지시어]
+
+1. ああ (저렇게)
+- かっこよく働いている先輩を見て、自分も早くああなりたいと思った。
+  (かっこよくはたらいているせんぱいをみて、じぶんもはやくああなりたいとおもった。)
+  [칵코요쿠 하타라이테 이루 센파이오 미테, 지분모 하야쿠 아아 나리타이토 오못타]
+  멋있게 일하고 있는 선배를 보고, 나도 빨리 저렇게 되고 싶다고 생각했다. [2014-2회]
+
+2. あの (저, 그 / <나와 상대방이 모두 알고 있는 사항일 때>)
+- 部長のあの言い方はひどいと思わない？
+  (ぶちょうのあのいいかたはひどいとおもわない？)
+  [부쵸오노 아노 이이카타와 히도이토 오모와나이]
+  부장의 그 말투는 심하다고 생각하지 않아? [2013-2회]
+
+3. あのとき (그 때)
+- あのときあきらめないでクラブの入り方を聞いたから
+  (あのときあきらめないでクラブのはいりかたをきいたから)
+  [아노 토키 아키라메나이데 쿠라부노 하이리카타오 키이타카라]
+  그 때 단념하지 않고 클럽에 들어가는 법을 물었기 때문에 [2019-1회]
+
+4. あんなに (저렇게, 그렇게 / <나와 상대방이 모두 알고 있는 사항일 때>)
+- 山下「さっき田中さんから、風邪ひいて、スキーに行けないって連絡が来たんだ。」
+  川村「えっ、田中さん、あんなに楽しみにしていたのに、残念だね。」
+  (やました「さっきたなかさんから、かぜひいて、スキーにいけないってれんらくがきたんだ。」／かわむら「えっ、たなかさん、あんなにたのしみにしていたのに、ざんねんだね。」)
+  [야마시타 "삿키 타나카산카라, 카제 히이테, 스키이니 이케나잇테 렌라쿠가 키탄다" / 카와무라 "엣, 타나카산, 안나니 타노시미니 시테 이타노니, 잔넨다네"]
+  야마시타 "아까 다나카 씨에게서 감기에 걸려서 스키 타러 못 간다고 연락이 왔어." / 가와무라 "뭐? 다나카 씨, 그렇게 기대하고 있었는데 유감이네." [2013-1회]
+
+5. こういう (이러한)
+- こういう電車なら、みんなが使いたくなる気持ちもわかります。
+  (こういうでんしゃなら、みんながつかいたくなるきもちもわかります。)
+  [코오이우 덴샤나라, 민나가 츠카이타쿠 나루 키모치모 와카리마스]
+  이러한 전철이라면 모두가 이용하고 싶어지는 마음도 이해됩니다. [2011-1회]
+
+6. この (이)
+- この自動販売機は話すことができます。
+  (このじどうはんばいきははなすことができます。)
+  [코노 지도오한바이키와 하나스 코토가 데키마스]
+  이 자동판매기는 말을 할 수 있습니다. [2010-1회]
+
+7. これ (이것)
+- これも天気の話をする人が多い理由の一つだと思います。
+  (これもてんきのはなしをするひとがおおいりゆうのひとつだとおもいます。)
+  [코레모 텐키노 하나시오 스루 히토가 오오이 리유우노 히토츠다토 오모이마스]
+  이것도 날씨 이야기를 하는 사람이 많은 이유 중 하나라고 생각합니다. [2016-2회]
+
+8. こんな (이런)
+- こんなかわいい娘がいる私は
+  (こんなかわいいむすめがいるわたしは)
+  [콘나 카와이이 무스메가 이루 와타시와]
+  이런 귀여운 딸이 있는 나는 [2012-2회]
+
+9. こんなに (이렇게, 이토록)
+- こんなに大変だとは思いませんでした。
+  (こんなにたいへんだとはおもいませんでした。)
+  [콘나니 타이헨다토와 오모이마센데시타]
+  이렇게 힘들리라고는 생각하지 못했습니다. [2013-2회]
+- こんなにきれいな夕日は見たことがありません。
+  (こんなにきれいなゆうひはみたことがありません。)
+  [콘나니 키레이나 유우히와 미타 코토가 아리마센]
+  이토록 멋진 석양은 본 적이 없습니다. [2017-1회]
+
+10. そう (그렇게)
+- 妹は初めてのピアノ発表会だったので緊張していたと言ったが、全然そう見えなかった。
+  (いもうとははじめてのピアノはっぴょうかいだったのできんちょうしていたといったが、ぜんぜんそうみえなかった。)
+  [이모오토와 하지메테노 피아노 핫표오카이닷타노데 킨쵸오시테 이타토 잇타가, 젠젠 소오 미에나캇타]
+  여동생은 첫 피아노 발표회였기 때문에 긴장했었다고 했지만, 전혀 그렇게 보이지 않았다. [2016-1회]
+
+11. そういう (그러한)
+- 日本にはそういうお菓子があると知って驚きました。
+  (にほんにはそういうおかしがあるとしっておどろきました。)
+  [니혼니와 소오이우 오카시가 아루토 싯테 오도로키마시타]
+  일본에는 그러한 과자가 있는 걸 알고 놀랐습니다. [2014-1회]
+- そういう店の、今まで知らなかったいいところを見つけることができました。
+  (そういうみせの、いままでしらなかったいいところをみつけることができました。)
+  [소오이우 미세노, 이마마데 시라나캇타 이이 토코로오 미츠케루 코토가 데키마시타]
+  그러한 가게의 지금까지 몰랐던 좋은 점을 발견할 수 있었습니다. [2021-1회]
+
+12. その (그)
+- 確かに、その先輩もコンビニで働いています。
+  (たしかに、そのせんぱいもコンビニではたらいています。)
+  [타시카니, 소노 센파이모 콘비니데 하타라이테 이마스]
+  확실히 그 선배도 편의점에서 일하고 있습니다. [2012-1회]
+- これがその学校にごみが落ちていなかった理由だと思います。
+  (これがそのがっこうにごみがおちていなかったりゆうだとおもいます。)
+  [코레가 소노 각코오니 고미가 오치테 이나캇타 리유우다토 오모이마스]
+  이것이 그 학교에 쓰레기가 떨어져 있지 않았던 이유라고 생각합니다. [2017-1회]
+
+13. それ (그것)
+- それをレジに持っていったとき
+  (それをレジにもっていったとき)
+  [소레오 레지니 못테 잇타 토키]
+  그것을 계산대에 가지고 갔을 때 [2014-2회]
+
+
+[5. 부사]
+
+1. あと (앞으로)
+- あと5分で電車が来ちゃうから、急いで。
+  (あと5ふんででんしゃがきちゃうから、いそいで。)
+  [아토 고훈데 덴샤가 키챠우카라, 이소이데]
+  앞으로 5분이면 전철이 오니까 서둘러. [2017-2회]
+
+2. あとで (나중에)
+- あとで私から電話するね。
+  (あとでわたしからでんわするね。)
+  [아토데 와타시카라 덴와스루네]
+  나중에 내가 전화할게. [2014-1회]
+
+3. あまりに (너무나, 지나치게)
+- 仕事があまりに忙しくて3年以内にやめてしまう社員が多いそうだ。
+  (しごとがあまりにいそがしくて3ねんいないにやめてしまうしゃいんがおおいそうだ。)
+  [시고토가 아마리니 이소가시쿠테 산넨 이나이니 야메테 시마우 샤인가 오오이 소오다]
+  일이 너무나 바빠서 3년 이내에 그만둬 버리는 사원이 많다고 한다. [2015-1회]
+- いつもは雨でも自転車で学校に行くが、今朝はあまりに雨が強かったので、
+  (いつもはあめでもじてんしゃでがっこうにいくが、けさはあまりにあめがつよかったので、)
+  [이츠모와 아메데모 지텐샤데 각코오니 이쿠가, 케사와 아마리니 아메가 츠요캇타노데]
+  평소에는 비가 와도 자전거로 학교에 가지만, 오늘 아침은 비가 너무 세게 와서 [2025-2회]
+
+4. あまりにも (너무나도)
+- 最近できたケーキ屋に今日初めて行ってみたが、あまりにも込んでいたので
+  (さいきんできたケーキやにきょうはじめていってみたが、あまりにもこんでいたので)
+  [사이킨 데키타 케에키야니 쿄오 하지메테 잇테 미타가, 아마리니모 콘데 이타노데]
+  최근에 생긴 케이크 가게에 오늘 처음 가봤는데, 너무나도 붐비고 있었기 때문에 [2018-2회]
+
+5. いつか (언젠가)
+- わたしもいつか一度行ってみたいなあ。
+  (わたしもいつかいちどいってみたいなあ。)
+  [와타시모 이츠카 이치도 잇테 미타이나아]
+  나도 언젠가 한번 가보고 싶네. [2011-1회]
+
+6. いつの間にか (いつのまにか / 어느새인가, 어느새)
+- 友人と電話で話していたらいつのまにか3時間もたっていて
+  (ゆうじんとでんわではなしていたらいつのまにか3じかんもたっていて)
+  [유우진토 덴와데 하나시테 이타라 이츠노마니카 산지칸모 탓테 이테]
+  친구와 전화로 이야기하고 있었더니 어느새인가 3시간이나 지나 있어서 [2014-2회]
+- 昼食の後、図書館へ行って本を読んでいたら、いつのまにか外が暗くなっていたので驚いた。
+  (ちゅうしょくのあと、としょかんへいってほんをよんでいたら、いつのまにかそとがくらくなっていたのでおどろいた。)
+  [츄우쇼쿠노 아토, 토쇼칸에 잇테 혼오 욘데 이타라, 이츠노마니카 소토가 쿠라쿠 낫테 이타노데 오도로이타]
+  점심 후 도서관에 가서 책을 읽고 있었더니 어느새 밖이 어두워져 있어서 놀랐다. [2025-1회]
+
+7. 今にも (いまにも / 당장에라도, 이제라도, 곧)
+- 大学に合格したという知らせを聞いて今にも泣きそうな顔をしていた。
+  (だいがくにごうかくしたというしらせをきいていまにもなきそうなかおをしていた。)
+  [다이가쿠니 고오카쿠시타토 이우 시라세오 키이테 이마니모 나키소오나 카오오 시테 이타]
+  대학에 합격했다는 소식을 듣고 당장에라도 울 것 같은 표정을 짓고 있었다. [2019-1회]
+
+8. 必ず (かならず / 반드시, 꼭)
+- 遅れる場合は、必ず学校に連絡してください。
+  (おくれるばあいは、かならずがっこうにれんらくしてください。)
+  [오쿠레루 바아이와, 카나라즈 각코오니 렌라쿠시테 쿠다사이]
+  늦을 경우에는 반드시 학교로 연락해 주세요. [2013-2회]
+- 来週の授業でこのプリントを使いますから、必ず持ってきてください。
+  (らいしゅうのじゅぎょうでこのプリントをつかいますから、かならずもってきてください。)
+  [라이슈우노 쥬교오데 코노 푸린토오 츠카이마스카라, 카나라즈 못테키테 쿠다사이]
+  다음 주 수업에서 이 인쇄물을 쓸 거니까 반드시 가지고 와 주세요. [2022-2회]
+
+9. 結局 (けっきょく / 결국)
+- 道が込んでいて結局遅刻してしまった。
+  (みちがこんでいてけっきょくちこくしてしまった。)
+  [미치가 콘데 이테 켓쿄쿠 치코쿠시테 시맛타]
+  길이 막혀서 결국 지각하고 말았다. [2024-1회]
+
+10. さっき (아까, 조금 전)
+- さっきご飯食べたばかりなのに、もうおなかすいたの。
+  (さっきごはんたべたばかりなのに、もうおなかすいたの。)
+  [삿키 고항 타베타 바카리나노니, 모오 오나카 스이타노]
+  아까 밥을 막 먹었는데도 벌써 배고파. [2024-2회]
+
+11. 次第に (しだいに / 점차, 차차)
+- 朝は雲っていたが、次第に晴れてきて、午後には快晴になった。
+  (あさはくもっていたが、しだいにはれてきて、ごごにはかいせいになった。)
+  [아사와 쿠못테 이타가, 시다이니 하레테 키테, 고고니와 카이세이니 낫타]
+  아침에는 흐렸지만 점차 맑아져서 오후에는 쾌청해졌다. [2014-2회]
+
+12. しばらく (잠시)
+- ここでしばらく休みましょう。
+  (ここでしばらくやすみましょう。)
+  [코코데 시바라쿠 야스미마쇼오]
+  여기에서 잠시 쉽시다.
+
+13. 少しも (すこしも / 조금도)
+- 私にはよくわからない絵ばかりで、少しも面白くなかった。
+  (わたしにはよくわからないえばかりで、すこしもおもしろくなかった。)
+  [와타시니와 요쿠 와카라나이 에 바카리데, 스코시모 오모시로쿠 나캇타]
+  나에게는 잘 모르는 그림뿐이라 조금도 재미있지 않았다. [2016-1회]
+
+14. すっかり (완전히, 까맣게)
+- 会議の資料のことをすっかり忘れていた。
+  (かいぎのしりょうのことをすっかりわすれていた。)
+  [카이기노 시료오노 코토오 슷카리 와스레테 이타]
+  회의 자료를 완전히 잊고 있었다. [2014-2회]
+
+15. ずっと (쭉, 계속)
+- これからもずっと
+  (これからもずっと)
+  [코레카라모 즛토]
+  앞으로도 쭉 [2014-1회]
+- 高校時代にずっと同じクラス
+  (こうこうじだいにずっとおなじクラス)
+  [코오코오 지다이니 즛토 오나지 쿠라스]
+  고교시절에 계속 같은 반 [2014-2회]
+
+16. せっかく (모처럼)
+- せっかく海外に来たのだから
+  (せっかくかいがいにきたのだから)
+  [셋카쿠 카이가이니 키타노다카라]
+  모처럼 해외에 왔으니까 [2013-1회]
+- 今朝せっかく早起きをしてお弁当を作ったのに、持ってくるのを忘れてしまった。
+  (けさせっかくはやおきをしておべんとうをつくったのに、もってくるのをわすれてしまった。)
+  [케사 셋카쿠 하야오키오 시테 오벤토오오 츠쿳타노니, 못테 쿠루노오 와스레테 시맛타]
+  오늘 아침 모처럼 일찍 일어나서 도시락을 만들었는데 가지고 오는 것을 잊고 말았다. [2018-1회]
+
+17. たしかに (분명히, 틀림없이)
+- あの人はたしかに短気だ。
+  (あのひとはたしかにたんきだ。)
+  [아노 히토와 타시카니 탄키다]
+  그 사람은 분명히 성질이 급한 사람이다. [2012-2회]
+
+18. ちっとも (조금도)
+- ちっとも私の言うことを聞かないので
+  (ちっともわたしのいうことをきかないので)
+  [칫토모 와타시노 이우 코토오 키카나이노데]
+  조금도 내가 하는 말을 듣지 않기 때문에 [2020]
+- 昨日見た映画は、面白いと聞いていたのに、ちっとも面白くなかった。
+  (きのうみたえいがは、おもしろいときいていたのに、ちっともおもしろくなかった。)
+  [키노오 미타 에이가와, 오모시로이토 키이테 이타노니, 칫토모 오모시로쿠 나캇타]
+  어제 본 영화는 재미있다고 들었는데, 조금도 재미있지 않았다. [2022-1회]
+
+19. ちょうど (꼭, 딱, 정확히, 마침)
+- このかばん、サイズがちょうどいいね。
+  (このかばん、サイズがちょうどいいね。)
+  [코노 카방, 사이즈가 쵸오도 이이네]
+  이 가방 크기가 딱 좋네.
+- ちょうど今、出かけるところです。
+  (ちょうどいま、でかけるところです。)
+  [쵸오도 이마, 데카케루 토코로데스]
+  마침 지금 나가려는 참이에요.
+
+20. ついに (결국, 드디어)
+- 長い間建設中だったABCビルが、昨日ついに完成した。
+  (ながいあいだけんせつちゅうだったABCビルが、きのうついいにかんせいした。)
+  [나가이 아이다 켄세츠츄우닷타 에이비이시이 비루가, 키노오 츠이니 칸세이시타]
+  오랫동안 건설 중이었던 ABC 빌딩이 어제 드디어 완성되었다. [2022-2회]
+- 留学したいと思っていた日本に、ついに留学できることになった。
+  (りゅうがくしたいとおもっていたにほんに、ついにりゅうがくできることになった。)
+  [류우가쿠시타이토 오못테 이타 니혼니, 츠이니 류우가쿠 데키루 코토니 낫타]
+  유학하고 싶다고 생각했던 일본에, 드디어 유학하게 되었다. [2023-2회]
+
+21. 全く (まったく / ① 전혀 ② 정말로, 참으로)
+- 彼の話は全く信じられない。
+  (かれのはなしはまったくしんじられない。)
+  [카레노 하나시와 맛타쿠 신지라레나이]
+  그의 이야기는 전혀 믿을 수 없다.
+- 彼女は全く料理が上手だ。
+  (かのじょはまったく りょうりがじょうずだ。)
+  [카노죠와 맛타쿠 료오리가 죠오즈다]
+  그녀는 정말로 요리를 잘한다.
+`;
+
+    const EXPRESSION_META = {
+      "1. 존경어|1": {
+        conn: "[존경어 특수동사 · 1그룹 라행 변칙] いらっしゃいます / いらっしゃった / いらっしゃって / いらっしゃらない",
+        note: "いる(있다)·来る(오다)·行く(가다)를 높여 말하는 대표 존경어 특수동사입니다.\n• 라행(ら행) 5단(1그룹) 활용이지만, ます형·명령형 등에서 'り'가 'い'로 바뀌어 いらっしゃいます·いらっしゃい가 됩니다.",
+        tip: "암기 팁: 'いる·来る·行く' 세 가지 동작을 한 단어로 높이는 만능 존경어! 'いらっしゃいませ(어서 오세요)'도 여기서 나왔습니다."
+      },
+      "1. 존경어|2": {
+        conn: "[존경어 특수동사 · 1그룹 라행 변칙] おっしゃいます / おっしゃった / おっしゃって / おっしゃらない",
+        note: "言う(말하다)를 높이는 존경어 특수동사입니다.\n• ます형은 おっしゃいます(×おっしゃります), て형은 おっしゃって로 활용합니다.",
+        tip: "암기 팁: 言う(말하다) → 존경어 おっしゃる / 겸양어 申す(申し上げる) 세트로 묶어 외우세요."
+      },
+      "1. 존경어|3": {
+        conn: "[존경어 특수동사 · 1그룹 라행 변칙] くださいます / くださった / くださって / くださらない",
+        note: "くれる(남이 나에게 주다)의 존경어입니다.\n• 윗사람이 나나 내 쪽 사람에게 물건이나 호의를 베풀 때 씁니다.",
+        tip: "암기 팁: くれる(주다)의 높임말이 くださる! 명령·부탁의 '〜てください'를 높이면 '〜てくださいませ / 〜てくださる'가 됩니다."
+      },
+      "1. 존경어|4": {
+        conn: "[명사/형용동사형 존경 표현] ご存知だ / ご存知です / ご存知ですか / ご存知ない",
+        note: "知っている(알고 있다)를 높여 말하는 존경 표현입니다.\n• 주의: '알고 계십니까?'는 ご存知ですか라고 하며, 뒤에 ている를 붙여 ×ご存知ています라고 하지 않습니다.",
+        tip: "암기 팁: 'ご存知ですか(알고 계십니까?)'는 비즈니스·시험 단골 표현! 부정형은 ご存知ない / ご存知ではありません입니다."
+      },
+      "1. 존경어|5": {
+        conn: "[존경어 특수동사 · 1그룹 라행 변칙] なさいます / なさった / なさって / なさらない",
+        note: "する(하다)를 높이는 존경어 특수동사입니다.\n• 명사 + をなさる(例: 勉強をなさる), 또는 선택 결정의 '〜になさいますか(어느 쪽으로 하시겠습니까?)' 형태로 자주 쓰입니다.",
+        tip: "암기 팁: する(하다) → 존경어 なさる / 겸양어 いたす! 점원이 손님에게 주문 받을 때 'どちらになさいますか'를 꼭 씁니다."
+      },
+      "1. 존경어|6": {
+        conn: "[존경어 특수동사 · 1그룹] 召し上がります / 召し上がった / 召し上がって / 召し上がらない",
+        note: "食べる(먹다)·飲む(마시다)를 높이는 존경어 특수동사입니다.\n• 식사·음료 권유 시 'どうぞ召し上がってください(많이 드세요)'처럼 씁니다.",
+        tip: "암기 팁: 食べる·飲む → 존경어 召し上がる / 겸양어 いただく! 방향을 반대로 쓰지 않도록 주의하세요."
+      },
+      "1. 존경어|7": {
+        conn: "[화어 동사] お + 동사 ます형 어간 + ください / [한자어 명사(する동사)] ご + 한자어 + ください",
+        note: "상대방에게 정중하게 행동·협조를 부탁하거나 권유하는 존경 요청 표현입니다.\n• 고유어(화어) 동사에는 お(お待ちください), 2음절 이상 한자어에는 ご(ご確認ください)를 붙입니다.",
+        tip: "암기 팁: お待ちください(기다려 주세요), お座りください(앉아 주세요), ご連絡ください(연락해 주세요)처럼 대표 예문으로 구분하세요."
+      },
+      "1. 존경어|8": {
+        conn: "[화어 동사] お + 동사 ます형 어간 + になる / [한자어 명사] ご + 한자어 + になる",
+        note: "상대방(윗사람)의 동작을 높여 서술하는 대표적 존경 공식입니다.\n• 가능 표현은 'お/ご〜になれる'(예: ご参加になれます = 참가하실 수 있습니다)로 만듭니다.",
+        tip: "암기 팁: 'お/ご〜になる'는 상대를 높이는 존경어, 'お/ご〜する(いたす)'는 나를 낮추는 겸양어! 뒤가 になる인지 する인지로 바로 구별됩니다."
+      },
+      "1. 존경어|9": {
+        conn: "[관용 존경 표현] ご覧になる / ご覧になって / ご覧の + 명사",
+        note: "見る(보다)를 높이는 관용 존경 표현입니다.\n• 동사형은 ご覧になる(보시다), 명사를 수식할 때는 ご覧の〜(보시는 ~) 형태로 쓰입니다.",
+        tip: "암기 팁: 見る → 존경어 ご覧になる / 겸양어 拝見する! TV 자막의 'ご覧のスポンサー(보시는 스폰서)'도 시험에 자주 나옵니다."
+      },
+      "1. 존경어|10": {
+        conn: "[동사 て형] + いらっしゃる (회화 축약: 〜てらっしゃる)",
+        note: "〜ている(~하고 있다 / ~해 있다)를 높이는 존경 진행·상태 표현입니다.\n• 윗사람이 지금 어떤 동작을 하고 계시거나 상태에 있을 때 씁니다.",
+        tip: "암기 팁: '〜ている'의 いる만 존경어 'いらっしゃる'로 바꿔 주면 완성! 話している → 話していらっしゃる."
+      },
+      "1. 존경어|11": {
+        conn: "[동사 て형] + くださる / [동사 て형] + いただけませんか",
+        note: "〜てくださる는 윗사람이 나에게 ~해 주심을 높여 말하고, 〜ていただけませんか는 상대에게 정중히 부탁할 때 씁니다.",
+        tip: "암기 팁: 남이 해 줌을 서술할 땐 〜てくださる(해 주시다), 내가 정중히 부탁할 땐 〜ていただけませんか(해 주시지 않겠습니까)!"
+      },
+
+      "2. 겸양어|1": {
+        conn: "[겸양어 1그룹] いただきます / いただいた / いただいて / いただかない",
+        note: "もらう(받다)와 食べる·飲む(먹다·마시다)의 겸양어입니다.\n• 윗사람에게 물건·호의를 받거나, 음식을 감사히 먹을 때 씁니다.",
+        tip: "암기 팁: 식사 전 인사 'いただきます'가 바로 이 단어! '받겠습니다·잘 먹겠습니다'라는 겸손 표현입니다."
+      },
+      "2. 겸양어|2": {
+        conn: "[겸양어 1그룹] 伺います / 伺った / 伺って / 伺わない",
+        note: "行く·来る(방문하다)와 聞く(듣다·여쭙다) 두 가지 뜻을 함께 지닌 겸양어입니다.\n• '선생님 댁/연구실에 찾아뵙다'와 '말씀을 여쭙다' 모두에 쓰입니다.",
+        tip: "암기 팁: 伺う = '찾아뵙다(방문)' + '여쭙다(질문)' 1타 2피 겸양어! 문맥 속 장소(研究室に)와 내용(〜について)으로 구분하세요."
+      },
+      "2. 겸양어|3": {
+        conn: "[대상 + に] + お目にかかる (1그룹 활용: お目にかかります / お目にかかった)",
+        note: "会う(만나다)의 겸양어입니다.\n• 윗사람이나 손님·거래처 사람을 '만나 뵙다'라고 낮추어 표현할 때 씁니다.",
+        tip: "암기 팁: '눈(目)에 걸리다(かかる)' → 높으신 분의 시선에 닿아 '만나 뵙다'라고 연상하면 절대 잊히지 않습니다."
+      },
+      "2. 겸양어|4": {
+        conn: "[겸양어/정중어 1그룹] おります / おった / おって / おらない",
+        note: "いる(있다)의 겸양어이자 격식 있는 정중어입니다.\n• 전화 응대에서 자기 회사 사람을 가리킬 때 '中川がおります(나카가와가 있습니다)'처럼 씁니다.",
+        tip: "암기 팁: 전화 받을 때 자기 쪽 직원은 높이지 않고 겸양어 'おります'를 씁니다! (×いらっしゃいます 주의)"
+      },
+      "2. 겸양어|5": {
+        conn: "[겸양어 2그룹] さしあげます / さしあげた / さしあげて / さしあげない",
+        note: "あげる(주다)의 겸양어입니다.\n• 화자 쪽에서 윗사람에게 물건이나 도움을 '드리다'라고 말할 때 씁니다.",
+        tip: "암기 팁: あげる(주다) → 겸양어 さしあげる! 단, 윗사람에게 직접 말할 때는 '〜しましょうか'가 더 자연스러운 경우도 많습니다."
+      },
+      "2. 겸양어|6": {
+        conn: "[화어 동사] お + 동사 ます형 어간 + いたす / [한자어 명사] ご + 한자어 + いたす",
+        note: "상대방과 관련된 화자의 행동을 한층 정중하게 낮추어 말하는 겸양어입니다.\n• 안내·서비스·비즈니스 현장에서 가장 많이 쓰입니다.",
+        tip: "암기 팁: お送りいたします(배웅해 드리겠습니다), ご案内いたします(안내해 드리겠습니다) — 서비스직 필수 패턴!"
+      },
+      "2. 겸양어|7": {
+        conn: "[화어 동사] お + 동사 ます형 어간 + する / [한자어 명사] ご + 한자어 + する",
+        note: "상대방에게 미치는 나의 행동을 낮추어 말할 때 쓰는 기본 겸양 공식입니다.\n• お借りする(빌리다), お持ちする(들어 드리다)처럼 일상에서도 자주 씁니다.",
+        tip: "암기 팁: 'お/ご〜する'는 일상 겸양, 'お/ご〜いたす'는 한 단계 더 정중한 비즈니스 겸양!"
+      },
+      "2. 겸양어|8": {
+        conn: "[동사 사역형 て형] + いただく (1그룹 あ단+せて / 2그룹 させて / 3그룹 させて·こさせて)",
+        note: "상대의 허락이나 배려를 받아 내가 어떤 행동을 하게 됨을 정중히 나타내는 겸양 표현입니다.\n• '~하게 해 주시다 / ~하겠습니다 / ~할 수 있을까요?'의 뜻을 담습니다.",
+        tip: "암기 팁: '사역(〜させる) + いただく(받다)' = 상대의 허락을 받아 내가 함! '使わせていただきます(잘 쓰겠습니다)'로 통째로 외우세요."
+      },
+      "2. 겸양어|9": {
+        conn: "[동사 て형] + いただく (1그룹 활용: いただきます / いただいた)",
+        note: "〜てもらう(~해 받다)의 겸양어입니다.\n• 윗사람이 나에게 어떤 행동을 해 주었을 때 감사와 존중을 담아 표현합니다.",
+        tip: "암기 팁: てもらう의 높임 버전이 ていただく! 주어는 '내가(私は)', 해 준 사람은 '선생님이(先生に)'가 됩니다."
+      },
+      "2. 겸양어|10": {
+        conn: "[동사 て형] + いただけませんか / いただけないでしょうか",
+        note: "상대방에게 정중하게 부탁·의뢰할 때 쓰는 핵심 표현입니다.\n• 〜ていただけないでしょうか로 말하면 한층 더 부드럽고 공손한 요청이 됩니다.",
+        tip: "암기 팁: 부탁 표현 정중도: 〜てください < 〜てくれませんか < 〜ていただけませんか < 〜ていただけないでしょうか."
+      },
+      "2. 겸양어|11": {
+        conn: "[이름 / 명사] + と申す (1그룹 활용: と申します / と申しました)",
+        note: "〜と言う(~라고 하다)의 겸양어입니다.\n• 자기소개나 전화 첫인사에서 자기 이름·소속을 밝힐 때 필수적으로 씁니다.",
+        tip: "암기 팁: 전화에서 '田中と申しますが(다나카라고 합니다만)' — 자기 이름을 말할 땐 무조건 と申します!"
+      },
+      "2. 겸양어|12": {
+        conn: "[명사 + を] + 拝見する (3그룹 활용: 拝見します / 拝見しました / 拝見して)",
+        note: "見る(보다)의 겸양어입니다.\n• 윗사람의 글·사진·서류·작품 등을 '보다(살펴보다)'라고 낮추어 말할 때 씁니다.",
+        tip: "암기 팁: '拝(절 배)' + '見(볼 견)' = 공손히 뵈어 보다! 見る의 겸양어 拝見する vs 존경어 ご覧になる를 짝지어 외우세요."
+      },
+      "2. 겸양어|13": {
+        conn: "[겸양어/정중어 1그룹] 参ります / 参った / 参って / 参らない",
+        note: "行く(가다)·来る(오다)의 겸양어이자 정중어입니다.\n• 내가 윗사람 쪽으로 가거나 올 때, 또는 안내 방송('電車が参ります = 전철이 들어옵니다')에도 쓰입니다.",
+        tip: "암기 팁: 일본 전철역 안내 방송 'まもなく電車が参ります'를 떠올리면 参る = '오다·가다'가 바로 기억납니다."
+      },
+
+      "3. 정중어|1": {
+        conn: "[명사 + が / は / に] + ございます / ございません",
+        note: "ある(있다)를 한층 격식 있고 정중하게 표현하는 정중어입니다.\n• 부정은 ありません 대신 'ございません'을 씁니다.",
+        tip: "암기 팁: ある → です/ます형 あります → 정중어 ございます! 부정형 'ございません'도 함께 외워 두세요."
+      },
+      "3. 정중어|2": {
+        conn: "[명사] + でございます / でございました",
+        note: "〜だ / 〜です(~입니다)를 더 정중하고 격식 있게 바꾸는 정중어입니다.\n• 가게·회사 전화 응대, 안내 데스크, 방송 멘트에서 자주 쓰입니다.",
+        tip: "암기 팁: '〜です'를 아주 공손하게 늘린 형태가 '〜でございます'! 매장 안내('5階でございます')를 연상하세요."
+      },
+
+      "4. 지시어|1": {
+        conn: "[부사형 지시어] ああ + 동사/형용사 (例: ああなる / ああ言う)",
+        note: "화자와 청자 모두의 시선·기억 속에 있는 멀리 떨어진 대상의 상태나 방식을 가리켜 '저렇게'라고 할 때 씁니다.",
+        tip: "암기 팁: 지시어 3총사 부사: こう(이렇게) / そう(그렇게) / ああ(저렇게)."
+      },
+      "4. 지시어|2": {
+        conn: "[연체사] あの + 명사",
+        note: "공간적으로 멀리 있는 대상을 가리킬 뿐 아니라, 화자와 청자가 공통으로 이미 알고 있는 과거 기억·사안을 가리킬 때도 씁니다.",
+        tip: "암기 팁: 대화 중 '나도 알고 너도 아는 그 일'을 꺼낼 때는 その보다 'あの'를 씁니다!"
+      },
+      "4. 지시어|3": {
+        conn: "[관용 시간 지시어] あのとき + 절",
+        note: "화자와 청자가 함께 겪었거나 서로 알고 있는 과거의 특정 시점('그때')을 회상할 때 씁니다.",
+        tip: "암기 팁: 과거 회상 도입부 'あのとき〜(그때 ~)'는 독해·청해 스토리 문제의 핵심 단서입니다."
+      },
+      "4. 지시어|4": {
+        conn: "[부사형 지시어] あんなに + 형용사/동사",
+        note: "서로 알고 있는 대상의 정도가 매우 큼을 가리켜 '저렇게(나), 그렇게(나)'라고 강조할 때 씁니다.",
+        tip: "암기 팁: こんなに(이렇게) / そんなに(그렇게) / あんなに(저렇게·서로 아는 일에 대해 그렇게)."
+      },
+      "4. 지시어|5": {
+        conn: "[연체사] こういう + 명사",
+        note: "방금 말한 내용이나 눈앞에 있는 구체적인 예시·성질을 가리켜 '이러한'이라고 명사를 수식합니다.",
+        tip: "암기 팁: こういう(이러한) / そういう(그러한) / ああいう(저러한) + 명사!"
+      },
+      "4. 지시어|6": {
+        conn: "[연체사] この + 명사",
+        note: "화자 가까이에 있는 사물·사람·장소나 지금 화제가 되고 있는 대상을 직접 가리켜 '이 ~'라고 수식합니다.",
+        tip: "암기 팁: この(이) / その(그) / あの(저)는 반드시 뒤에 명사가 따라오는 연체사입니다."
+      },
+      "4. 지시어|7": {
+        conn: "[대명사] これ + 조사(は / が / を / も / に)",
+        note: "화자 가까운 곳의 사물이나 바로 앞에서 언급한 내용을 명사 대신 받아 '이것'이라고 가리킵니다.",
+        tip: "암기 팁: これ(이것) / それ(그것) / あれ(저것)는 단독 명사처럼 바로 조사가 붙습니다."
+      },
+      "4. 지시어|8": {
+        conn: "[연체사] こんな + 명사",
+        note: "화자 가까운 곳의 성질·모습이나 화자의 감정(놀람·감탄·불만)을 담아 '이런 ~'이라고 명사를 수식합니다.",
+        tip: "암기 팁: こんな(이런) / そんな(그런) / あんな(저런) + 명사! 감정·성질을 강조할 때 자주 씁니다."
+      },
+      "4. 지시어|9": {
+        conn: "[부사형 지시어] こんなに + 형용사/동사",
+        note: "지금 직접 겪거나 눈으로 본 정도가 예상보다 큼을 강조해 '이렇게, 이토록'이라고 꾸며 줍니다.",
+        tip: "암기 팁: 뒤에 형용사(大変だ·きれいだ)가 오면 'こんな'가 아니라 부사형 'こんなに'를 씁니다."
+      },
+      "4. 지시어|10": {
+        conn: "[부사형 지시어] そう + 동사/형용사 (例: そう見える / そう思う)",
+        note: "상대가 말한 내용이나 앞 문장에서 언급한 상태·방식을 받아 '그렇게'라고 가리킵니다.",
+        tip: "암기 팁: 앞 문장 내용을 그대로 받을 땐 'そう'! 'そう見えなかった(그렇게 보이지 않았다)'."
+      },
+      "4. 지시어|11": {
+        conn: "[연체사] そういう + 명사",
+        note: "상대방이 말했거나 앞 문맥에서 설명한 종류·성질의 대상을 받아 '그러한 ~'이라고 수식합니다.",
+        tip: "암기 팁: 상대방 이야기 속 대상을 받을 땐 こういう가 아니라 'そういう'!"
+      },
+      "4. 지시어|12": {
+        conn: "[연체사] その + 명사",
+        note: "청자 쪽에 있는 대상이나 앞 문장에서 이미 등장한 명사·내용을 가리켜 '그 ~'라고 수식합니다.",
+        tip: "암기 팁: 문장 흐름 속에서 앞에 나온 명사를 다시 받을 땐 'その + 명사'가 기본입니다."
+      },
+      "4. 지시어|13": {
+        conn: "[대명사] それ + 조사(は / が / を / に / で)",
+        note: "청자 가까이에 있는 사물이나 앞 문장에서 언급한 사물을 받아 '그것'이라고 가리킵니다.",
+        tip: "암기 팁: 앞에 나온 물건·내용을 대명사로 받을 땐 'それ'!"
+      },
+
+      "5. 부사|1": {
+        conn: "[부사] あと + 수량/시간 표현 (例: あと5分 / あと少し)",
+        note: "남은 시간·분량·횟수를 나타내어 '앞으로 ~, ~만 더'라는 뜻을 나타냅니다.",
+        tip: "암기 팁: 'あと + 숫자' = 남은 시간·개수! 'あと5分(앞으로 5분 남음)'."
+      },
+      "5. 부사|2": {
+        conn: "[부사] あとで + 동사 (과거/비과거 모두 가능)",
+        note: "지금이 아니라 시간이 조금 흐른 뒤에 어떤 행동을 할 때 '나중에, 이따가'라는 뜻으로 씁니다.",
+        tip: "암기 팁: あと(남은 분량: あと5分) vs あとで(나중에: あとで電話する)를 구분하세요."
+      },
+      "5. 부사|3": {
+        conn: "[부사] あまりに + 형용사/동사 (주로 뒤에 원인·결과가 이어짐)",
+        note: "정도가 일반적인 범위를 넘어서 '너무나, 지나치게'라는 뜻을 나타냅니다.",
+        tip: "암기 팁: あまり〜ない(별로 ~하지 않다)와 달리, 'あまりに + 긍정 서술'은 '너무나 ~해서'라는 뜻입니다!"
+      },
+      "5. 부사|4": {
+        conn: "[부사] あまりにも + 형용사/동사",
+        note: "あまりに에 강조 조사 も가 붙어 '너무나도, 도를 넘을 정도로'라는 감정을 한층 강하게 나타냅니다.",
+        tip: "암기 팁: あまりに보다 감탄·당황 뉘앙스가 더 강한 강조 표현이 'あまりにも'!"
+      },
+      "5. 부사|5": {
+        conn: "[부사] いつか + 동사 (미래 희망/과거 막연한 시점)",
+        note: "정확한 날짜는 정해지지 않았지만 '언젠가'라는 미래의 희망이나 막연한 시점을 나타냅니다.",
+        tip: "암기 팁: 'いつか〜たい(언젠가 ~하고 싶다)' 패턴이 회화와 독해에서 아주 자주 쓰입니다."
+      },
+      "5. 부사|6": {
+        conn: "[부사] いつの間にか + 변화/결과 동사",
+        note: "화자가 의식하거나 눈치채지 못하는 사이에 어느덧 상태가 바뀌어 있음을 나타냅니다.",
+        tip: "암기 팁: '어느 틈(間)엔가' → 시간이 흐르거나 날이 어두워진 것을 뒤늦게 알아차릴 때 씁니다."
+      },
+      "5. 부사|7": {
+        conn: "[부사] 今にも + 동사 ます형 어간 + そうだ (예: 今にも泣きそうだ / 今にも降りそうだ)",
+        note: "금방이라도 어떤 일이 터지거나 일어날 것 같은 절박한 직전의 모습을 나타냅니다.",
+        tip: "암기 팁: '今にも 〜そうだ(당장이라도 ~할 것 같다)'는 시험 단골 호응 세트입니다!"
+      },
+      "5. 부사|8": {
+        conn: "[부사] 必ず + 긍정 명령·의뢰·의무 / 必ずしも + 부정(〜ない)",
+        note: "빠짐없이 틀림없이 실행해야 함('반드시, 꼭')을 강조합니다. (단, 必ずしも〜ない는 부분 부정)",
+        tip: "암기 팁: 必ず〜てください(반드시 ~해 주세요)처럼 지시·안내문에서 핵심 단서로 나옵니다."
+      },
+      "5. 부사|9": {
+        conn: "[부사] 結局 + 결론/결과 문장",
+        note: "여러 과정이나 우여곡절을 거친 끝에 최종적으로 도달한 결론('결국')을 나타냅니다.",
+        tip: "암기 팁: 과정이 길거나 꼬인 뒤 마지막 결론을 맺을 때 '結局(결국)'을 씁니다."
+      },
+      "5. 부사|10": {
+        conn: "[부사] さっき + 과거형(〜た / 〜たばかり)",
+        note: "현재 시점에서 그리 멀지 않은 '아까, 방금 전'을 가리키며 주로 과거형과 함께 쓰입니다.",
+        tip: "암기 팁: さっき(방금 전·과거) ↔ あとで(이따가·미래) 반의어 쌍으로 외우세요!"
+      },
+      "5. 부사|11": {
+        conn: "[부사] 次第に + 변화 동사(〜てくる / 〜になる)",
+        note: "시간이 흐르면서 조금씩 점진적으로 변해 가는 모습('점차, 차차')을 나타냅니다.",
+        tip: "암기 팁: 갑작스러운 변화가 아니라 '서서히·점차(次第に)' 변하는 흐름에 씁니다."
+      },
+      "5. 부사|12": {
+        conn: "[부사] しばらく + 동사 (예: しばらく休む / しばらく待つ)",
+        note: "아주 짧지도 아주 길지도 않은 '잠시, 당분간'의 시간 동안 어떤 상태를 유지함을 나타냅니다.",
+        tip: "암기 팁: 'しばらくお待ちください(잠시 기다려 주세요)'·'しばらくぶりですね(오랜만이네요)'로 함께 기억하세요."
+      },
+      "5. 부사|13": {
+        conn: "[부사] 少しも + 부정형(〜ない / 〜なかった)",
+        note: "부정 표현과 호응하여 '조금도 ~하지 않다'라는 전면 부정을 만듭니다.",
+        tip: "암기 팁: 少し(조금) + も + 부정(ない) = '조금도 ~않다'!"
+      },
+      "5. 부사|14": {
+        conn: "[부사] すっかり + 변화/완료 동사 (예: すっかり忘れる / すっかり変わる)",
+        note: "남김없이 완전히 바뀐 상태('완전히, 까맣게, 싹')를 나타냅니다.",
+        tip: "암기 팁: 'すっかり忘れた(까맣게 잊었다)', 'すっかり元気になった(완전히 건강해졌다)'로 외우면 감이 잡힙니다."
+      },
+      "5. 부사|15": {
+        conn: "[부사] ずっと + 상태/지속 표현 (또는 비교급 앞 '훨씬')",
+        note: "처음부터 끝까지 끊기지 않고 이어지는 지속('쭉, 계속')을 나타냅니다. (비교문에서는 '훨씬' 뜻도 있음)",
+        tip: "암기 팁: 시간의 연속은 'ずっと(쭉)', 비교 차이는 'ずっと大きい(훨씬 크다)'!"
+      },
+      "5. 부사|16": {
+        conn: "[부사] せっかく + 의지적 행동 / せっかく〜のに (아쉬움)",
+        note: "모처럼 시간·노력·기회를 들였음을 나타내며, 뒤에는 보람 있게 쓰자는 내용이나 아쉽게 헛수고가 된 내용(〜のに)이 자주 옵니다.",
+        tip: "암기 팁: 'せっかく〜のに(모처럼 ~했는데)'는 회화와 독해에서 아쉬움을 드러내는 대표 호응 패턴입니다."
+      },
+      "5. 부사|17": {
+        conn: "[부사] たしかに + 사실 인정 문장 (뒤에 が/けれど 등 역접이 이어지기도 함)",
+        note: "상대 말이나 어떤 사실이 틀림없음을 분명히 인정할 때('분명히, 확실히') 씁니다.",
+        tip: "암기 팁: 確か(분명함) + に = '분명히'! 'たしかに〜だが(분명히 ~이지만)'로 자주 이어집니다."
+      },
+      "5. 부사|18": {
+        conn: "[부사] ちっとも + 부정형(〜ない / 〜なかった)",
+        note: "기대와 달리 전혀 진전이나 효과가 없음을 불만·실망감과 함께 '조금도 ~않다'로 표현합니다.",
+        tip: "암기 팁: 少しも와 뜻은 같지만, ちっとも는 회화에서 아쉬움·불만 뉘앙스가 더 살아납니다."
+      },
+      "5. 부사|19": {
+        conn: "[부사] ちょうど + 시간/수량/형용사 (예: ちょうどいい / ちょうど今)",
+        note: "크기·시간·타이밍이 오차 없이 딱 들어맞을 때('꼭, 딱, 마침') 씁니다.",
+        tip: "암기 팁: 'ちょうどいい(딱 좋다)'·'ちょうど今(마침 지금)' 두 표현을 대표로 외우세요."
+      },
+      "5. 부사|20": {
+        conn: "[부사] ついに + 과거 실현/완료 문장",
+        note: "오랫동안 기다리거나 애쓴 끝에 마침내 실현되었음을 나타냅니다('결국, 드디어').",
+        tip: "암기 팁: 結局(결과 정리·다소 부정적 결과에도 쓰임) vs ついに(오랜 기다림 끝 실현·'드디어')!"
+      },
+      "5. 부사|21": {
+        conn: "[부사] ① 全く + 부정형(〜ない) / ② 全く + 긍정 평가·감탄",
+        note: "부정형과 함께 쓰이면 '전혀 ~않다', 긍정 평가와 함께 쓰이면 '정말로, 참으로'라는 강조 부사가 됩니다.",
+        tip: "암기 팁: 뒤가 부정(信じられない)이면 '전혀', 뒤가 긍정(上手だ)이면 '정말로'로 해석이 갈립니다!"
+      }
+    };
+
+    const VOCAB_BANK = {
+      "研究室": {
+        reading: "けんきゅうしつ (켄큐우시츠)",
+        meaning: "연구실",
+        hanzi: "핵심: 研究(연구) + 室(방 실) → 대학·기관에서 연구하는 방\n좌우·구조: 研(왼쪽 石 + 오른쪽 開 계열) + 究(위 穴 + 아래 九) + 室(집·방)"
+      },
+      "明日": {
+        reading: "あした / あす (아시타 / 아스)",
+        meaning: "내일",
+        hanzi: "핵심: 明(밝을 명) + 日(날 일) → 밝아 오는 다음 날\n좌우·구조: 明은 왼쪽 日(해 일) + 오른쪽 月(달 월)"
+      },
+      "午後": {
+        reading: "ごご (고고)",
+        meaning: "오후",
+        hanzi: "핵심: 午(낮 오) + 後(뒤 후) → 정오 이후의 시간\n좌우·구조: 午前(오전)의 반대말"
+      },
+      "先生": {
+        reading: "せんせい (센세이)",
+        meaning: "선생님",
+        hanzi: "핵심: 先(먼저 선) + 生(살·날 생) → 먼저 태어나 가르치는 스승\n좌우·구조: 先(먼저) + 生(삶·사람)"
+      },
+      "希望": {
+        reading: "きぼう (키보오)",
+        meaning: "희망",
+        hanzi: "핵심: 希(바랄 희) + 望(바랄 망) → 바라고 원하는 마음\n좌우·구조: 希(바라다) + 望(바라보다)"
+      },
+      "見つかる": {
+        reading: "みつかる (미츠카루)",
+        meaning: "발견되다, 찾아지다",
+        hanzi: "핵심: 見(볼 견) + つかる → 찾던 것이 눈에 띄다\n좌우·구조: 見つける(타동사·찾다)와 見つかる(자동사·찾아지다) 쌍"
+      },
+      "ご両親": {
+        reading: "ごりょうしん (고료오신)",
+        meaning: "부모님 (상대방의 부모님)",
+        hanzi: "핵심: ご(존경 접두어) + 兩(두 량)의 약자 両 + 親(어버이 친) → 양친, 부모님\n좌우·구조: 両(둘) + 親(왼쪽 立·木 + 오른쪽 見)"
+      },
+      "社長": {
+        reading: "しゃちょう (샤쵸오)",
+        meaning: "사장",
+        hanzi: "핵심: 社(회사 사) + 長(어른 장) → 회사의 대표\n좌우·구조: 社(왼쪽 礻 + 오른쪽 土) + 長"
+      },
+      "出張": {
+        reading: "しゅっちょう (슛쵸오)",
+        meaning: "출장",
+        hanzi: "핵심: 出(나갈 출) + 張(베풀·펼 장) → 업무로 다른 지역에 나감\n좌우·구조: 出(나가다) + 張(왼쪽 弓 + 오른쪽 長)"
+      },
+      "お土産": {
+        reading: "おみやげ (오미야게)",
+        meaning: "선물, 토산품",
+        hanzi: "핵심: お(미화어) + 土(땅 토) + 産(낳을 산) → 여행지·출장지 선물\n좌우·구조: 土産을 'みやげ'로 읽는 특수 읽기(숙자훈)"
+      },
+      "以上": {
+        reading: "いじょう (이죠오)",
+        meaning: "이상",
+        hanzi: "핵심: 以(써 이) + 上(위 상) → 기준 수치를 포함해 그 위\n좌우·구조: 以下(이하)의 반대말"
+      },
+      "歴史": {
+        reading: "れきし (레키시)",
+        meaning: "역사",
+        hanzi: "핵심: 歷(지낼 력)의 약자 歴 + 史(역사 사) → 지나온 시대의 기록\n좌우·구조: 歴(위 厂 + 아래 林·止) + 史"
+      },
+      "確認": {
+        reading: "かくにん (카쿠닌)",
+        meaning: "확인",
+        hanzi: "핵심: 確(확실할 확) + 認(알·인정할 인) → 틀림없는지 살핌\n좌우·구조: 確(왼쪽 石 + 오른쪽 隺) + 認(왼쪽 言 + 오른쪽 忍)"
+      },
+      "少々": {
+        reading: "しょうしょう (쇼오쇼오)",
+        meaning: "잠시, 조금",
+        hanzi: "핵심: 少(적을 소) + 々(중복 부호) → 잠깐, 조금\n좌우·구조: 접객·비즈니스에서 '잠시만(少々お待ちください)'으로 자주 쓰임"
+      },
+      "市民": {
+        reading: "しみん (시민)",
+        meaning: "시민",
+        hanzi: "핵심: 市(저자·도시 시) + 民(백성 민) → 도시에 사는 주민\n좌우·구조: 市(도시) + 民(백성)"
+      },
+      "無料": {
+        reading: "むりょう (무료오)",
+        meaning: "무료",
+        hanzi: "핵심: 無(없을 무) + 料(헤아릴·요금 료) → 요금이 없음\n좌우·구조: 有料(유료)의 반대말"
+      },
+      "参加": {
+        reading: "さんか (산카)",
+        meaning: "참가",
+        hanzi: "핵심: 參(참여할 참)의 약자 参 + 加(더할 가) → 모임이나 행사에 함께함\n좌우·구조: 参 + 加(왼쪽 力 + 오른쪽 口)"
+      },
+      "論文": {
+        reading: "ろんぶん (론분)",
+        meaning: "논문",
+        hanzi: "핵심: 論(논할 론) + 文(글 문) → 학술적 주장을 정리한 글\n좌우·구조: 論(왼쪽 言 + 오른쪽 侖) + 文"
+      },
+      "雑誌": {
+        reading: "ざっし (잣시)",
+        meaning: "잡지",
+        hanzi: "핵심: 雜(섞일 잡)의 약자 雑 + 誌(기록할 지) → 여러 읽을거리를 실은 정기간행물\n좌우·구조: 雑 + 誌(왼쪽 言 + 오른쪽 志)"
+      },
+      "提供": {
+        reading: "ていきょう (테이쿄오)",
+        meaning: "제공",
+        hanzi: "핵심: 提(끌·내놓을 제) + 供(이바지할 공) → 내어 줌, 공급함\n좌우·구조: 提(왼쪽 扌 + 오른쪽 是) + 供(왼쪽 亻 + 오른쪽 共)"
+      },
+      "学生": {
+        reading: "がくせい (가쿠세이)",
+        meaning: "학생",
+        hanzi: "핵심: 學(배울 학)의 약자 学 + 生(날 생) → 학교에서 배우는 사람\n좌우·구조: 学(배움) + 生(사람)"
+      },
+      "納豆": {
+        reading: "なっとう (낫토오)",
+        meaning: "낫토 (일본 발효 콩 음식)",
+        hanzi: "핵심: 納(들일 납) + 豆(콩 두) → 발효시킨 콩 음식\n좌우·구조: 納(왼쪽 糸 + 오른쪽 内) + 豆(콩)"
+      },
+      "場所": {
+        reading: "ばしょ (바쇼)",
+        meaning: "장소, 곳",
+        hanzi: "핵심: 場(마당 장) + 所(곳 소) → 위치, 장소\n좌우·구조: 場(왼쪽 土 + 오른쪽 昜) + 所"
+      },
+      "教える": {
+        reading: "おしえる (오시에루)",
+        meaning: "가르치다, 알려주다",
+        hanzi: "핵심: 教(가르칠 교) + える → 지식이나 길·방법을 알려주다\n좌우·구조: 2그룹 동사로 教えて(가르쳐)로 활용"
+      },
+      "昨日": {
+        reading: "きのう (키노오)",
+        meaning: "어제",
+        hanzi: "핵심: 昨(어제 작) + 日(날 일) → 바로 지나간 어젯날\n좌우·구조: 昨(왼쪽 日 + 오른쪽 乍)"
+      },
+      "授業": {
+        reading: "じゅぎょう (쥬교오)",
+        meaning: "수업",
+        hanzi: "핵심: 授(줄 수) + 業(일·학업 업) → 가르치고 배우는 수업\n좌우·구조: 授(왼쪽 扌 + 오른쪽 受) + 業"
+      },
+      "募集": {
+        reading: "ぼしゅう (보슈우)",
+        meaning: "모집",
+        hanzi: "핵심: 募(모을 모) + 集(모을 집) → 인원이나 응모자를 모음\n좌우·구조: 募(위 莫 + 아래 力) + 集"
+      },
+      "課長": {
+        reading: "かちょう (카쵸오)",
+        meaning: "과장",
+        hanzi: "핵심: 課(과목·부과 과) + 長(어른 장) → 회사의 과를 맡은 책임자\n좌우·구조: 課(왼쪽 言 + 오른쪽 果) + 長"
+      },
+      "代わる": {
+        reading: "かわる (카와루)",
+        meaning: "바뀌다, 대신하다, 전화 등을 바꿔 주다",
+        hanzi: "핵심: 代(대신할 대) + わる → 다른 사람과 교대하다\n좌우·구조: 代(왼쪽 亻 + 오른쪽 弋)"
+      },
+      "用意": {
+        reading: "ようい (요오이)",
+        meaning: "준비, 마련",
+        hanzi: "핵심: 用(쓸 용) + 意(뜻 의) → 미리 갖추어 준비함\n좌우·구조: 用 + 意(위 音 + 아래 心)"
+      },
+      "最後": {
+        reading: "さいご (사이고)",
+        meaning: "마지막, 끝",
+        hanzi: "핵심: 最(가장 최) + 後(뒤 후) → 맨 마지막\n좌우·구조: 最 + 後"
+      },
+      "計画": {
+        reading: "けいかく (케이카쿠)",
+        meaning: "계획",
+        hanzi: "핵심: 計(헤아릴 계) + 畫(계획 획)의 약자 画 → 미리 세운 계획\n좌우·구조: 計(왼쪽 言 + 오른쪽 十) + 画"
+      },
+      "駅": {
+        reading: "えき (에키)",
+        meaning: "역",
+        hanzi: "핵심: 驛(역 역)의 약자 → 전철·기차역\n좌우·구조: 왼쪽 馬 + 오른쪽 尺"
+      },
+      "送る": {
+        reading: "おくる (오쿠루)",
+        meaning: "보내다, 배웅하다",
+        hanzi: "핵심: 送(보낼 송) + る → 물건을 보내거나 사람을 배웅하다\n좌우·구조: 辶(길 갈 착) + 关"
+      },
+      "案内": {
+        reading: "あんない (안나이)",
+        meaning: "안내",
+        hanzi: "핵심: 案(책상·살필 안) + 內(안 내) → 길이나 내용을 알려 이끌어 줌\n좌우·구조: 案(위 安 + 아래 木) + 内"
+      },
+      "借りる": {
+        reading: "かりる (카리루)",
+        meaning: "빌리다",
+        hanzi: "핵심: 借(빌릴 차) + りる → 물건이나 돈을 빌리다\n좌우·구조: 借(왼쪽 亻 + 오른쪽 昔)"
+      },
+      "荷物": {
+        reading: "にもつ (니모츠)",
+        meaning: "짐, 수하물",
+        hanzi: "핵심: 荷(짐 하) + 物(물건 물) → 들고 다니거나 부치는 짐\n좌우·구조: 荷(위 艹 + 아래 何) + 物"
+      },
+      "練習": {
+        reading: "れんしゅう (렌슈우)",
+        meaning: "연습",
+        hanzi: "핵심: 練(익힐 련) + 習(익힐 습) → 반복해 익힘\n좌우·구조: 練(왼쪽 糸 + 오른쪽 東) + 習(위 羽 + 아래 白)"
+      },
+      "見学": {
+        reading: "けんがく (켄가쿠)",
+        meaning: "견학",
+        hanzi: "핵심: 見(볼 견) + 學(배울 학)의 약자 学 → 직접 보고 배움\n좌우·구조: 見 + 学"
+      },
+      "大切": {
+        reading: "たいせつ (타이세츠)",
+        meaning: "소중함, 중요함",
+        hanzi: "핵심: 大(큰 대) + 切(간절할 절) → 매우 귀중하고 중요함\n좌우·구조: 大 + 切(왼쪽 七 + 오른쪽 刀)"
+      },
+      "資料": {
+        reading: "しりょう (시료오)",
+        meaning: "자료",
+        hanzi: "핵심: 資(재물·바탕 자) + 料(헤아릴 료) → 참고나 연구에 쓰는 재료·자료\n좌우·구조: 資(위 次 + 아래 貝) + 料"
+      },
+      "忘れる": {
+        reading: "わすれる (와스레루)",
+        meaning: "잊다, 깜빡 두고 오다",
+        hanzi: "핵심: 忘(잊을 망) + れる → 기억에서 잃어버리다\n좌우·구조: 위 亡(잃을 망) + 아래 心(마음 심)"
+      },
+      "写真": {
+        reading: "しゃしん (샤신)",
+        meaning: "사진",
+        hanzi: "핵심: 寫(베낄 사)의 약자 写 + 眞(참 진)의 약자 真 → 모습을 그대로 찍은 사진\n좌우·구조: 写 + 真"
+      },
+      "予約": {
+        reading: "よやく (요야쿠)",
+        meaning: "예약",
+        hanzi: "핵심: 予(미리 예) + 約(맺을 약) → 미리 약속해 둠\n좌우·구조: 予 + 約(왼쪽 糸 + 오른쪽 勺)"
+      },
+      "変える": {
+        reading: "かえる (카에루)",
+        meaning: "바꾸다, 변경하다",
+        hanzi: "핵심: 變(변할 변)의 약자 変 + える → 시간·계획·모습을 바꾸다\n좌우·구조: 変える(타동사) vs 変わる(자동사)"
+      },
+      "貸す": {
+        reading: "かす (카스)",
+        meaning: "빌려주다",
+        hanzi: "핵심: 貸(빌릴 대) + す → 남에게 빌려주다\n좌우·구조: 貸す(빌려주다) ↔ 借りる(빌리다)"
+      },
+      "銀行": {
+        reading: "ぎんこう (긴코오)",
+        meaning: "은행",
+        hanzi: "핵심: 銀(은 은) + 行(다닐·기관 행) → 금융 기관\n좌우·구조: 銀(왼쪽 金 + 오른쪽 艮) + 行"
+      },
+      "電車": {
+        reading: "でんしゃ (덴샤)",
+        meaning: "전철",
+        hanzi: "핵심: 電(전기 전) + 車(수레 거) → 전기로 달리는 열차\n좌우·구조: 電 + 車"
+      },
+      "お手洗い": {
+        reading: "おてあらい (오테아라이)",
+        meaning: "화장실",
+        hanzi: "핵심: お + 手(손 수) + 洗い(씻음) → 손을 씻는 곳, 화장실\n좌우·구조: トイレ보다 정중하고 부드러운 표현"
+      },
+      "店員": {
+        reading: "てんいん (텐인)",
+        meaning: "점원",
+        hanzi: "핵심: 店(가게 점) + 員(인원 원) → 가게에서 일하는 직원\n좌우·구조: 店(위 广 + 아래 占) + 員"
+      },
+      "間違い": {
+        reading: "まちがい (마치가이)",
+        meaning: "실수, 오류, 틀림",
+        hanzi: "핵심: 間(사이 간) + 違い(다름) → 잘못됨, 오류\n좌우·구조: 間 + 違(왼쪽 辶 + 오른쪽 韋)"
+      },
+      "美容院": {
+        reading: "びよういん (비요오인)",
+        meaning: "미용실",
+        hanzi: "핵심: 美容(미용) + 院(집 원) → 머리·외모를 가꾸는 곳\n좌우·구조: 美(아름다울 미) + 容(얼굴 용) + 院"
+      },
+      "売り場": {
+        reading: "うりば (우리바)",
+        meaning: "매장, 파는 곳",
+        hanzi: "핵심: 売り(판매) + 場(장소 장) → 물건을 파는 코너·매장\n좌우·구조: 売 + 場"
+      },
+      "先輩": {
+        reading: "せんぱい (센파이)",
+        meaning: "선배",
+        hanzi: "핵심: 先(먼저 선) + 輩(무리 배) → 먼저 들어온 선배\n좌우·구조: 先 + 輩(위 非 + 아래 車)"
+      },
+      "自分": {
+        reading: "じぶん (지분)",
+        meaning: "자신, 자기",
+        hanzi: "핵심: 自(스스로 자) + 分(나눌 분) → 자기 자신\n좌우·구조: 自 + 分"
+      },
+      "部長": {
+        reading: "ぶちょう (부쵸오)",
+        meaning: "부장",
+        hanzi: "핵심: 部(부서 부) + 長(어른 장) → 부서의 책임자\n좌우·구조: 部 + 長"
+      },
+      "言い方": {
+        reading: "いいかた (이이카타)",
+        meaning: "말투, 말하는 방식",
+        hanzi: "핵심: 言い(말함) + 方(방법 방) → 말하는 어조·방식\n좌우·구조: 言 + 方"
+      },
+      "連絡": {
+        reading: "れんらく (렌라쿠)",
+        meaning: "연락",
+        hanzi: "핵심: 連(이을 련) + 絡(얽을 락) → 소식이나 뜻을 전함\n좌우·구조: 連(왼쪽 辶 + 오른쪽 車) + 絡(왼쪽 糸 + 오른쪽 各)"
+      },
+      "残念": {
+        reading: "ざんねん (잔넨)",
+        meaning: "유감, 아쉽다",
+        hanzi: "핵심: 残(남을·해칠 잔) + 念(생각할 념) → 안타깝고 아쉽다\n좌우·구조: 残 + 念(위 今 + 아래 心)"
+      },
+      "自動販売機": {
+        reading: "じどうはんばいき (지도오한바이키)",
+        meaning: "자동판매기, 자판기",
+        hanzi: "핵심: 自動(자동) + 販売(판매) + 機(기계 기) → 자판기\n좌우·구조: 自 + 動 + 販 + 売 + 機"
+      },
+      "天気": {
+        reading: "てんき (텐키)",
+        meaning: "날씨",
+        hanzi: "핵심: 天(하늘 천) + 気(기운 기) → 하늘의 기상 상태\n좌우·구조: 天 + 気"
+      },
+      "理由": {
+        reading: "りゆう (리유우)",
+        meaning: "이유",
+        hanzi: "핵심: 理(이치 리) + 由(말미암을 유) → 까닭, 근거\n좌우·구조: 理(왼쪽 王 + 오른쪽 里) + 由"
+      },
+      "娘": {
+        reading: "むすめ (무스메)",
+        meaning: "딸, 아가씨",
+        hanzi: "핵심: 娘(아가씨·딸 낭) → 딸\n좌우·구조: 왼쪽 女(여자 녀) + 오른쪽 良(좋을 량)"
+      },
+      "大変": {
+        reading: "たいへん (타이헨)",
+        meaning: "힘듦, 큰일, 매우",
+        hanzi: "핵심: 大(큰 대) + 変(변할 변) → 매우 힘듦, 대단함\n좌우·구조: 大 + 変"
+      },
+      "夕日": {
+        reading: "ゆうひ (유우히)",
+        meaning: "석양, 저녁 해",
+        hanzi: "핵심: 夕(저녁 석) + 日(해 일) → 저물어 가는 저녁 해\n좌우·구조: 夕(저녁) + 日(해)"
+      },
+      "緊張": {
+        reading: "きんちょう (킨쵸오)",
+        meaning: "긴장",
+        hanzi: "핵심: 緊(긴장할·팽팽할 긴) + 張(당길·펼 장) → 마음이 졸이고 팽팽해짐\n좌우·구조: 緊(위 臤 + 아래 糸) + 張"
+      },
+      "お菓子": {
+        reading: "おかし (오카시)",
+        meaning: "과자",
+        hanzi: "핵심: お + 菓(과실·과자 과) + 子(아들·물건 자) → 과자, 디저트\n좌우·구조: 菓(위 艹 + 아래 果) + 子"
+      },
+      "驚く": {
+        reading: "おどろく (오도로쿠)",
+        meaning: "놀라다",
+        hanzi: "핵심: 驚(놀랄 경) + く → 깜짝 놀라다\n좌우·구조: 驚(위 敬 + 아래 馬)"
+      },
+      "急ぐ": {
+        reading: "いそぐ (이소구)",
+        meaning: "서두르다",
+        hanzi: "핵심: 急(급할 급) + ぐ → 빨리 움직이다\n좌우·구조: 急(위 刍 + 아래 心)"
+      },
+      "社員": {
+        reading: "しゃいん (샤인)",
+        meaning: "사원, 회사원",
+        hanzi: "핵심: 社(회사 사) + 員(인원 원) → 회사에 소속된 직원\n좌우·구조: 社 + 員"
+      },
+      "自転車": {
+        reading: "じてんしゃ (지텐샤)",
+        meaning: "자전거",
+        hanzi: "핵심: 自(스스로 자) + 転(구를 전) + 車(차 거) → 자전거\n좌우·구조: 自 + 転 + 車"
+      },
+      "今朝": {
+        reading: "けさ (케사)",
+        meaning: "오늘 아침",
+        hanzi: "핵심: 今(이제 금) + 朝(아침 조) → 오늘 아침\n좌우·구조: 'けさ'로 읽는 숙자훈 단어"
+      },
+      "友人": {
+        reading: "ゆうじん (유우진)",
+        meaning: "친구, 벗",
+        hanzi: "핵심: 友(벗 우) + 人(사람 인) → 친구\n좌우·구조: 友達보다 조금 격식 있는 표현"
+      },
+      "昼食": {
+        reading: "ちゅうしょく (츄우쇼쿠)",
+        meaning: "점심 식사",
+        hanzi: "핵심: 昼(낮 주) + 食(밥 식) → 점심 식사\n좌우·구조: 朝食(아침)·昼食(점심)·夕食(저녁) 세트"
+      },
+      "図書館": {
+        reading: "としょかん (토쇼칸)",
+        meaning: "도서관",
+        hanzi: "핵심: 図書(도서) + 館(집·관 관) → 책을 열람·대출하는 곳\n좌우·구조: 図 + 書 + 館"
+      },
+      "合格": {
+        reading: "ごうかく (고오카쿠)",
+        meaning: "합격",
+        hanzi: "핵심: 合(맞을 합) + 格(기준 격) → 시험에 통과함\n좌우·구조: 合 + 格"
+      },
+      "遅れる": {
+        reading: "おくれる (오쿠레루)",
+        meaning: "늦다, 지각하다",
+        hanzi: "핵심: 遅(늦을 지) + れる → 정해진 시간보다 늦다\n좌우·구조: 遅(왼쪽 辶 + 오른쪽 犀)"
+      },
+      "場合": {
+        reading: "ばあい (바아이)",
+        meaning: "경우",
+        hanzi: "핵심: 場(마당 장) + 合(맞을 합) → 어떤 상황이나 경우\n좌우·구조: 場 + 合"
+      },
+      "来週": {
+        reading: "らいしゅう (라이슈우)",
+        meaning: "다음 주",
+        hanzi: "핵심: 来(올 래) + 週(주 주) → 다가오는 주\n좌우·구조: 先週(지난주)·今週(이번 주)·来週(다음 주)"
+      },
+      "遅刻": {
+        reading: "ちこく (치코쿠)",
+        meaning: "지각",
+        hanzi: "핵심: 遅(늦을 지) + 刻(시각 각) → 정해진 시각에 늦음\n좌우·구조: 遅 + 刻(왼쪽 亥 + 오른쪽 刂)"
+      },
+      "晴れる": {
+        reading: "はれる (하레루)",
+        meaning: "(날씨가) 맑아지다, 개다",
+        hanzi: "핵심: 晴(갤 청) + れる → 구름이 걷히고 날이 개다\n좌우·구조: 晴(왼쪽 日 + 오른쪽 青)"
+      },
+      "快晴": {
+        reading: "かいせい (카이세이)",
+        meaning: "쾌청, 아주 맑은 날씨",
+        hanzi: "핵심: 快(쾌할 쾌) + 晴(갤 청) → 구름 한 점 없이 상쾌하게 맑음\n좌우·구조: 快(왼쪽 忄 + 오른쪽 夬) + 晴"
+      },
+      "面白い": {
+        reading: "おもしろい (오모시로이)",
+        meaning: "재미있다, 흥미롭다",
+        hanzi: "핵심: 面(낯 면) + 白(흰 백) + い → 눈앞이 환해질 만큼 재미있다\n좌우·구조: 面 + 白"
+      },
+      "海外": {
+        reading: "かいがい (카이가이)",
+        meaning: "해외, 외국",
+        hanzi: "핵심: 海(바다 해) + 外(바깥 외) → 바다 건너 외국\n좌우·구조: 海(왼쪽 氵 + 오른쪽 毎) + 外"
+      },
+      "早起き": {
+        reading: "はやおき (하야오키)",
+        meaning: "일찍 일어남",
+        hanzi: "핵심: 早(이를 조) + 起き(일어남) → 아침 일찍 일어남\n좌우·구조: 早(위 日 + 아래 十) + 起"
+      },
+      "お弁当": {
+        reading: "おべんとう (오벤토오)",
+        meaning: "도시락",
+        hanzi: "핵심: お + 弁(분별할·갖출 변) + 当(당할 당) → 싸 가지고 다니는 식사\n좌우·구조: 弁 + 当"
+      },
+      "短気": {
+        reading: "たんき (탄키)",
+        meaning: "성급함, 다혈질",
+        hanzi: "핵심: 短(짧을 단) + 気(기운·성질 기) → 참을성이 짧고 성질이 급함\n좌우·구조: 短(왼쪽 矢 + 오른쪽 豆) + 気"
+      },
+      "建設中": {
+        reading: "けんせつちゅう (켄세츠츄우)",
+        meaning: "건설 중",
+        hanzi: "핵심: 建設(건설) + 中(중) → 건물이나 시설을 짓고 있는 중\n좌우·구조: 建 + 設 + 中"
+      },
+      "完成": {
+        reading: "かんせい (칸세이)",
+        meaning: "완성",
+        hanzi: "핵심: 完(완전할 완) + 成(이룰 성) → 전부 다 만들어 이룸\n좌우·구조: 完(위 宀 + 아래 元) + 成"
+      },
+      "留学": {
+        reading: "りゅうがく (류우가쿠)",
+        meaning: "유학",
+        hanzi: "핵심: 留(머무를 류) + 学(배울 학) → 외국에 머물며 공부함\n좌우·구조: 留 + 学"
+      },
+      "信じる": {
+        reading: "しんじる (신지루)",
+        meaning: "믿다",
+        hanzi: "핵심: 信(믿을 신) + じる → 사실이라고 믿다\n좌우·구조: 信(왼쪽 亻 + 오른쪽 言)"
+      },
+      "上手": {
+        reading: "じょうず (죠오즈)",
+        meaning: "능숙함, 잘함",
+        hanzi: "핵심: 上(위·뛰어남 상) + 手(솜씨 수) → 솜씨가 뛰어남\n좌우·구조: 上 + 手"
+      }
+    };
+
+    function parseStudyData(rawText) {
+      const lines = rawText.replace(/\r\n/g, "\n").split("\n");
+      const items = [];
+      let currentCat = "";
+      let currentItem = null;
+      let currentEx = null;
+
+      function flushEx() {
+        if (currentItem && currentEx) {
+          currentItem.examples.push(currentEx);
+          currentEx = null;
+        }
+      }
+
+      function flushItem() {
+        flushEx();
+        if (currentItem) {
+          items.push(currentItem);
+          currentItem = null;
+        }
+      }
+
+      for (const rawLine of lines) {
+        const line = rawLine.trim();
+        if (!line) continue;
+
+        const catMatch = line.match(/^\[(\d+\.\s*[^\]]+)\]$/);
+        if (catMatch) {
+          flushItem();
+          currentCat = catMatch[1].trim();
+          continue;
+        }
+
+        const itemMatch = line.match(/^(\d+)\.\s+(.+)$/);
+        if (itemMatch && currentCat) {
+          flushItem();
+          const num = parseInt(itemMatch[1], 10);
+          const rest = itemMatch[2].trim();
+          const parenIdx = rest.indexOf("(");
+          let headword = rest;
+          let meaning = "";
+          if (parenIdx !== -1 && rest.endsWith(")")) {
+            headword = rest.slice(0, parenIdx).trim();
+            meaning = rest.slice(parenIdx + 1, -1).trim();
+          }
+          currentItem = {
+            category: currentCat,
+            num,
+            headword,
+            meaning,
+            examples: []
+          };
+          continue;
+        }
+
+        if (!currentItem) continue;
+
+        if (line.startsWith("- ")) {
+          flushEx();
+          currentEx = {
+            jp: line.slice(2).trim(),
+            hira: "",
+            pron: "",
+            kr: "",
+            year: ""
+          };
+          continue;
+        }
+
+        if (currentEx) {
+          if (line.startsWith("(") && line.endsWith(")")) {
+            currentEx.hira = line.slice(1, -1).trim();
+          } else if (line.startsWith("[") && line.endsWith("]")) {
+            currentEx.pron = line.slice(1, -1).trim();
+          } else if (!currentEx.hira && !currentEx.pron && !currentEx.kr) {
+            currentEx.jp += "\n" + line;
+          } else {
+            const yearMatch = line.match(/\[(\d{4}(?:-\d회)?)\]\s*$/);
+            let krText = line;
+            if (yearMatch) {
+              currentEx.year = yearMatch[1];
+              krText = line.replace(/\s*\[\d{4}(?:-\d회)?\]\s*$/, "").trim();
+            }
+            currentEx.kr = currentEx.kr ? `${currentEx.kr}\n${krText}` : krText;
+          }
+        }
+      }
+
+      flushItem();
+
+      const cards = [];
+      for (const it of items) {
+        const metaKey = `${it.category}|${it.num}`;
+        const meta = EXPRESSION_META[metaKey] || {
+          conn: "문맥과 품사에 맞게 결합하여 사용합니다.",
+          note: `${it.category} 영역의 핵심 표현입니다.`,
+          tip: `암기 팁: '${it.headword}'의 뜻(${it.meaning})과 예문 발음을 함께 익혀 보세요.`
+        };
+        it.examples.forEach((ex, idx) => {
+          const catPrefix = it.category.split(".")[0].trim();
+          const uid = `C${catPrefix}-${String(it.num).padStart(2, "0")}-${idx + 1}`;
+          cards.push({
+            uid,
+            category: it.category,
+            num: it.num,
+            exIndex: idx + 1,
+            exTotal: it.examples.length,
+            headword: it.headword,
+            meaning: it.meaning,
+            connection: meta.conn,
+            note: meta.note,
+            tip: meta.tip,
+            jp: ex.jp,
+            hira: ex.hira,
+            pron: ex.pron,
+            kr: ex.kr,
+            year: ex.year
+          });
+        });
+      }
+      return cards;
+    }
+
+    const ALL_CARDS = parseStudyData(RAW_DATA);
+
+    function normalizePron(str) {
+      return (str || "")
+        .toLowerCase()
+        .replace(/[\s\u00A0·ㆍ・,，.。!?！？"'“”‘’()（）「」『』〜～ー\-／\/…]/g, "")
+        .trim();
+    }
+
+    function checkPronMatch(userInput, card) {
+      const u = normalizePron(userInput);
+      if (!u) return false;
+      const p = normalizePron(card.pron);
+      const h = normalizePron(card.hira);
+      return (p && u === p) || (h && u === h);
+    }
+
+    function buildInflectionGuide(card) {
+      const notes = [];
+      const blob = `${card.connection} ${card.headword} ${card.jp}`;
+
+      if (/1그룹/.test(blob)) {
+        notes.push("• 1그룹(5단) 동사 활용: 어미를 あ단(부정)/い단(ます형)/う단(사전형)/え단(가정·가능)/お단(의지)으로 바꿉니다.\n  ※ 존경어 특수동사(いらっしゃる·おっしゃる·くださる·なさる)는 ます형에서 'り→い'로 바뀝니다(いらっしゃいます·おっしゃいます).");
+      }
+      if (/2그룹/.test(blob)) {
+        notes.push("• 2그룹(상·하1단) 동사 활용: 어미 'る'를 떼고 어간에 ます·て·た·ない·られる·させる를 바로 연결합니다.\n  예시) さしあげる → さしあげます / 変える → 変えて");
+      }
+      if (/3그룹/.test(blob)) {
+        notes.push("• 3그룹(불규칙) 동사 활용: する → します·して·した·しない·される·させる / 来る(くる) → きます·きて·きた·こない·こられる·こさせる");
+      }
+      if (/て형/.test(blob)) {
+        notes.push("• 동사 て형 연결: 1그룹(う·つ·る→って / む·ぶ·ぬ→んで / く→いて / ぐ→いで / す→して), 2그룹(어간+て), 3그룹(して·きて)");
+      }
+      if (/사역/.test(blob)) {
+        notes.push("• 동사 사역형 변형: 1그룹(あ단+せる) / 2그룹(어간+させる) / 3그룹(する→させる, 来る→こさせる)\n  예시) 見学する → 見学させる / 使う → 使わせる");
+      }
+      if (/화어|한자어|お／ご/.test(blob)) {
+        notes.push("• 접두어 お / ご 구별 원칙: 일본 고유어(화어)에는 'お'(お待ち·お借り·お持ち), 2음절 이상 한자어에는 'ご'(ご確認·ご参加·ご案内)를 붙입니다.");
+      }
+      if (/연체사/.test(blob)) {
+        notes.push("• 연체사 수식 규칙: この·その·あの·こんな·そんな·あんな·こういう·そういう·ああいう는 반드시 뒤에 명사가 와서 수식합니다.");
+      }
+      if (/부사/.test(blob)) {
+        notes.push("• 부사 호응 포인트: 少しも·ちっとも는 뒤의 부정형(〜ない)과, 今にも는 〜そうだ와, せっかく는 〜のに와 자주 짝을 이룹니다.");
+      }
+
+      return notes.join("\n\n");
+    }
+
+    function renderConnectionRules(card) {
+      const container = document.getElementById("expConnection");
+      const rawConn = (card.connection || "접속 규칙 정보 없음").trim();
+      const parts = rawConn.split(/\s*\/\s*(?=\[|①|②|③|※)/).filter(Boolean);
+
+      const rows = (parts.length ? parts : [rawConn]).map((part) => {
+        let chipClass = "pos-chip";
+        let chipLabel = "활용·접속";
+        if (/존경|겸양|정중|동사|1그룹|2그룹|3그룹/.test(part)) {
+          chipLabel = "동사·경어";
+        } else if (/연체사|대명사|지시어/.test(part)) {
+          chipClass = "pos-chip noun";
+          chipLabel = "지시어";
+        } else if (/부사/.test(part)) {
+          chipClass = "pos-chip adj-i";
+          chipLabel = "부사";
+        } else if (/명사/.test(part)) {
+          chipClass = "pos-chip adj-na";
+          chipLabel = "명사";
+        }
+
+        return `
+          <div class="conn-rule-row">
+            <div class="conn-rule-head">
+              <span class="${chipClass}">${chipLabel}</span>
+            </div>
+            <div class="conn-rule-body jp">${part}</div>
+          </div>
+        `;
+      }).join("");
+
+      container.innerHTML = `<div class="conn-rule-list">${rows}</div>`;
+    }
+
+    function extractSentenceVocab(jpText) {
+      const sortedKeys = Object.keys(VOCAB_BANK).sort((a, b) => b.length - a.length);
+      const matched = [];
+      let remaining = jpText || "";
+
+      for (const word of sortedKeys) {
+        if (remaining.includes(word)) {
+          const entry = VOCAB_BANK[word];
+          matched.push({
+            word,
+            reading: entry.reading || "",
+            meaning: entry.meaning || "",
+            hanzi: entry.hanzi || ""
+          });
+          remaining = remaining.split(word).join(" ");
+        }
+      }
+      return matched;
+    }
+
+    function parseHanziBreakdown(item) {
+      const raw = (item.hanzi || "").trim();
+      const lines = raw.split("\n").map((l) => l.trim()).filter(Boolean);
+      let coreLine = "";
+      let sideLine = "";
+
+      for (const line of lines) {
+        if (/^핵심\s*:/.test(line)) {
+          coreLine = line.replace(/^핵심\s*:\s*/, "").trim();
+        } else if (/^(좌우|구조|부수)\s*·?.*:/.test(line)) {
+          sideLine = line.replace(/^(좌우|구조|부수)[^:]*:\s*/, "").trim();
+        } else if (!coreLine) {
+          coreLine = line;
+        } else {
+          sideLine = sideLine ? `${sideLine}\n${line}` : line;
+        }
+      }
+
+      if (!coreLine) {
+        coreLine = `${item.word} (${item.meaning || "단어"})`;
+      }
+      if (!sideLine) {
+        sideLine = "한자 구성 부수와 음훈을 함께 소리 내며 연결해 보세요.";
+      }
+      return { coreLine, sideLine };
+    }
+
+    function buildMnemonicText(item, coreLine, sideLine) {
+      const textBlob = `${item.word} ${item.meaning} ${coreLine} ${sideLine}`;
+      const glyph = (item.word || "字").slice(0, 2);
+
+      let originTag = "한자연상 · 원형기원 연상";
+      let story = `원형 기원 연상:\n'${glyph}'의 본래 상형 기원과 부수 뜻을 떠올리며 '${item.meaning}' 의미와 연결하세요.`;
+
+      if (/연구|학|교|수업|논문|도서|学|研|教|書|論/.test(textBlob)) {
+        originTag = "한자연상 · 學·書·研 원형 연상";
+        story = "원형 기원 연상(學·書):\n學은 지붕 아래 아이(子)가 두 손으로 배움을 익히는 모습, 書는 붓(聿)으로 기록하는 모양입니다.\n• 연상고리: 배움의 집과 붓의 기록 → 공부·수업·연구·논문";
+      } else if (/시간|내일|어제|오늘|오후|아침|점심|주|明|昨|今|朝|昼|週/.test(textBlob)) {
+        originTag = "한자연상 · 日·月·朝 원형 연상";
+        story = "원형 기원 연상(日·月·朝):\n日은 둥근 태양, 月은 초승달, 朝는 풀잎 사이로 해가 떠오르고 달이 지는 새벽 모습입니다.\n• 연상고리: 해와 달의 순환 → 아침·점심·어제·내일·다음 주";
+      } else if (/말|연락|질문|확인|안내|인사|言|話|問|認|連/.test(textBlob)) {
+        originTag = "한자연상 · 言(말씀 언) 원형 연상";
+        story = "원형 기원 연상(言):\n입(口) 위로 말소리가 울려 퍼지는 모양을 본뜬 상형문자입니다.\n• 연상고리: 입에서 나오는 말과 소식 → 말투·질문·확인·연락";
+      } else if (/이동|출장|역|배웅|전철|자전거|가다|오다|出|駅|送|車|遅/.test(textBlob)) {
+        originTag = "한자연상 · 辶(길)·車(수레) 원형 연상";
+        story = "원형 기원 연상(辶·車):\n辶(쉬엄쉬엄 갈 착)은 발자국과 길, 車는 바퀴 달린 수레의 위쪽 모양에서 유래했습니다.\n• 연상고리: 길 위를 달리는 수레와 발걸음 → 전철·역·출장·배웅·지각";
+      } else if (/마음|희망|긴장|놀라|유감|소중|잊다|心|念|忘|驚|緊/.test(textBlob)) {
+        originTag = "한자연상 · 心(마음 심) 원형 연상";
+        story = "원형 기원 연상(心):\n가슴 속 심장의 윤곽과 뛰는 맥박을 그린 상형문자로 감정·생각을 나타냅니다.\n• 연상고리: 마음속 움직임 → 희망·긴장·유감·소중함·잊음";
+      } else if (/물건|선물|돈|예약|빌리|판매|매장|貝|貸|借|売|買/.test(textBlob)) {
+        originTag = "한자연상 · 貝(조개·재물 패) 원형 연상";
+        story = "원형 기원 연상(貝):\n고대 화폐로 쓰이던 조개껍데기 모양에서 유래해 재물·거래·가치를 뜻합니다.\n• 연상고리: 가치의 교환과 약속 → 빌리다·빌려주다·판매·예약";
+      }
+
+      return { originTag, story: `${story}\n• 핵심 연결: ${coreLine}` };
+    }
+
+    const STORAGE_KEY = "jlpt_n3_keigo_adverb_study_v1";
+
+    function loadState() {
+      const fallback = {
+        theme: "light",
+        scope: "all",
+        search: "",
+        currentUid: ALL_CARDS[0] ? ALL_CARDS[0].uid : "",
+        records: {}
+      };
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return fallback;
+        const parsed = JSON.parse(raw);
+        return {
+          theme: parsed.theme === "dark" ? "dark" : "light",
+          scope: parsed.scope || "all",
+          search: typeof parsed.search === "string" ? parsed.search : "",
+          currentUid: parsed.currentUid || fallback.currentUid,
+          records: parsed.records && typeof parsed.records === "object" ? parsed.records : {}
+        };
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    let state = loadState();
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        toast("저장 공간에 기록할 수 없습니다.");
+      }
+    }
+
+    function toast(msg) {
+      const el = document.getElementById("toast");
+      el.textContent = msg;
+      el.classList.add("show");
+      clearTimeout(toast._t);
+      toast._t = setTimeout(() => el.classList.remove("show"), 2000);
+    }
+
+    function applyTheme() {
+      document.documentElement.setAttribute("data-theme", state.theme);
+      document.getElementById("themeBtn").textContent = state.theme === "dark" ? "라이트 모드" : "다크 모드";
+    }
+
+    function getScopedCards() {
+      const q = (state.search || "").trim().toLowerCase();
+      return ALL_CARDS.filter((c) => {
+        const rec = state.records[c.uid];
+        if (state.scope === "wrong") {
+          if (!rec || rec.status !== "wrong") return false;
+        } else if (state.scope === "unsolved") {
+          if (rec && rec.status) return false;
+        } else if (state.scope !== "all") {
+          if (c.category !== state.scope) return false;
+        }
+
+        if (!q) return true;
+        const blob = [
+          c.category,
+          String(c.num),
+          c.headword,
+          c.meaning,
+          c.jp,
+          c.hira,
+          c.pron,
+          c.kr,
+          c.year
+        ].join(" ").toLowerCase();
+        return blob.includes(q);
+      });
+    }
+
+    function getCurrentCard() {
+      const list = getScopedCards();
+      if (!list.length) return null;
+      return list.find((c) => c.uid === state.currentUid) || list[0];
+    }
+
+    function updateHeaderStats() {
+      const totalAll = ALL_CARDS.length;
+      let done = 0;
+      let ok = 0;
+      let bad = 0;
+
+      for (const c of ALL_CARDS) {
+        const r = state.records[c.uid];
+        if (r && r.status) {
+          done += 1;
+          if (r.status === "correct") ok += 1;
+          else if (r.status === "wrong") bad += 1;
+        }
+      }
+
+      const scoped = getScopedCards();
+      document.getElementById("statDone").textContent = `${done} / ${totalAll}`;
+      document.getElementById("statOk").textContent = `${ok}`;
+      document.getElementById("statBad").textContent = `${bad}`;
+      document.getElementById("statScope").textContent = `${scoped.length}개`;
+      document.getElementById("progressFill").style.width = `${totalAll ? Math.round((done / totalAll) * 100) : 0}%`;
+    }
+
+    function rebuildQuestionSelect(list, cur) {
+      const sel = document.getElementById("questionSelect");
+      if (!list.length) {
+        sel.innerHTML = `<option value="">표시할 문항 없음</option>`;
+        return;
+      }
+      sel.innerHTML = list.map((c) => {
+        const st = state.records[c.uid]?.status;
+        const mark = st === "correct" ? " [정답]" : st === "wrong" ? " [오답]" : "";
+        const catShort = c.category.replace(/^\d+\.\s*/, "");
+        const firstKr = c.kr.split("\n")[0].slice(0, 22);
+        return `<option value="${c.uid}">[${catShort} ${c.num}-${c.exIndex}] ${c.headword} · ${firstKr}${mark}</option>`;
+      }).join("");
+      sel.value = cur.uid;
+    }
+
+    function renderCard() {
+      updateHeaderStats();
+      const list = getScopedCards();
+      const cur = getCurrentCard();
+      rebuildQuestionSelect(list, cur);
+
+      document.getElementById("resultBox").classList.add("hidden");
+
+      const promptJp = document.getElementById("promptJp");
+      const promptKr = document.getElementById("promptKr");
+      const promptHint = document.getElementById("promptHint");
+      const promptYear = document.getElementById("promptYear");
+      const inputEl = document.getElementById("pronInput");
+      const statusBadge = document.getElementById("statusBadge");
+
+      if (!cur) {
+        document.getElementById("catBadge").textContent = "필터 결과 없음";
+        document.getElementById("grammarBadge").textContent = "문항 없음";
+        document.getElementById("posIndexText").textContent = "0 / 0";
+        statusBadge.textContent = "필터 비어 있음";
+        statusBadge.className = "status-pill";
+        promptJp.textContent = "선택한 조건에 맞는 문항이 없습니다.";
+        promptKr.textContent = "파트나 검색어를 조정해 보세요.";
+        promptHint.textContent = "";
+        promptYear.classList.add("hidden");
+        inputEl.value = "";
+        inputEl.disabled = true;
+        return;
+      }
+
+      inputEl.disabled = false;
+      state.currentUid = cur.uid;
+      saveState();
+
+      const pos = list.findIndex((c) => c.uid === cur.uid);
+      document.getElementById("catBadge").textContent = cur.category;
+      document.getElementById("grammarBadge").textContent = `${cur.num}. ${cur.headword}`;
+      document.getElementById("posIndexText").textContent = `${pos + 1} / ${list.length} (예문 ${cur.exIndex}/${cur.exTotal})`;
+
+      const rec = state.records[cur.uid];
+      if (!rec || !rec.status) {
+        statusBadge.textContent = "미학습";
+        statusBadge.className = "status-pill";
+      } else if (rec.status === "correct") {
+        statusBadge.textContent = "정답 완료";
+        statusBadge.className = "status-pill ok";
+      } else {
+        statusBadge.textContent = "오답 복습";
+        statusBadge.className = "status-pill bad";
+      }
+
+      promptJp.textContent = cur.jp;
+      promptKr.textContent = `(${cur.kr})`;
+      promptHint.textContent = cur.meaning ? `핵심 의미: ${cur.meaning}` : `분류: ${cur.category}`;
+
+      if (cur.year) {
+        promptYear.textContent = `기출 ${cur.year}`;
+        promptYear.classList.remove("hidden");
+      } else {
+        promptYear.classList.add("hidden");
+      }
+
+      inputEl.value = rec?.userInput || "";
+    }
+
+    function setCardStatus(uid, status, userInput) {
+      state.records[uid] = {
+        status,
+        userInput: typeof userInput === "string" ? userInput : (state.records[uid]?.userInput || ""),
+        updatedAt: Date.now()
+      };
+      saveState();
+      updateHeaderStats();
+      const cur = getCurrentCard();
+      if (cur) rebuildQuestionSelect(getScopedCards(), cur);
+
+      const badge = document.getElementById("statusBadge");
+      if (status === "correct") {
+        badge.textContent = "정답 완료";
+        badge.className = "status-pill ok";
+      } else if (status === "wrong") {
+        badge.textContent = "오답 복습";
+        badge.className = "status-pill bad";
+      }
+    }
+
+    function showExplanation(card, userInput, mode) {
+      const box = document.getElementById("resultBox");
+      box.classList.remove("hidden");
+
+      const banner = document.getElementById("verdictBanner");
+      const titleEl = document.getElementById("verdictTitle");
+      const hiraLine = document.getElementById("refHiraLine");
+      const refLine = document.getElementById("refPronLine");
+      const userLine = document.getElementById("userPronLine");
+
+      hiraLine.textContent = `히라가나 표기: ${card.hira || "(표기 없음)"}`;
+      refLine.textContent = `기준 한글 발음: ${card.pron || "(발음 표기 없음)"}`;
+      userLine.textContent = `내 입력: ${userInput.trim() ? userInput.trim() : "(미입력)"}`;
+
+      if (mode === "reveal") {
+        banner.className = "verdict-banner revealed";
+        titleEl.textContent = "정답 및 상세 해설을 확인하세요";
+      } else if (checkPronMatch(userInput, card)) {
+        banner.className = "verdict-banner match";
+        titleEl.textContent = "발음이 일치합니다! (정답 처리됨)";
+        setCardStatus(card.uid, "correct", userInput);
+      } else {
+        banner.className = "verdict-banner mismatch";
+        titleEl.textContent = "발음 차이가 있습니다 — 아래 히라가나·발음과 자가 채점을 확인하세요";
+        setCardStatus(card.uid, "wrong", userInput);
+      }
+
+      document.getElementById("expGrammarMeaning").textContent =
+        `분류: ${card.category}\n표현: ${card.headword}${card.meaning ? `\n핵심 뜻: ${card.meaning}` : ""}`;
+      document.getElementById("expExtraNotes").textContent = card.note;
+      document.getElementById("expMemoryTip").textContent = card.tip;
+
+      renderConnectionRules(card);
+      document.getElementById("expInflection").textContent = buildInflectionGuide(card);
+
+      const vocab = extractSentenceVocab(card.jp);
+      const vocabContainer = document.getElementById("expVocabList");
+      if (!vocab.length) {
+        vocabContainer.innerHTML = `<div class="vocab-item"><div class="v-kr">예문 속 핵심 표현 '${card.headword}'와 문장 전체 발음을 소리 내어 함께 익혀 보세요.</div></div>`;
+      } else {
+        vocabContainer.innerHTML = vocab.map((v) => {
+          const { coreLine, sideLine } = parseHanziBreakdown(v);
+          const visual = buildMnemonicText(v, coreLine, sideLine);
+          return `
+            <article class="vocab-item">
+              <div class="vocab-top">
+                <span class="v-jp jp">${v.word}</span>
+                ${v.reading ? `<span class="v-rd">${v.reading}</span>` : ""}
+              </div>
+              <div class="v-kr">뜻: ${v.meaning}</div>
+              <div class="vocab-struct-panel">
+                <div class="vocab-struct-row">
+                  <span class="vocab-struct-tag">핵심</span>
+                  <span class="vocab-struct-text">${coreLine}</span>
+                </div>
+                <div class="vocab-struct-row">
+                  <span class="vocab-struct-tag side">좌우·구조</span>
+                  <span class="vocab-struct-text">${sideLine}</span>
+                </div>
+              </div>
+              <div class="vocab-mnemonic-box">
+                <div class="vocab-mnemonic-caption">
+                  <span class="vocab-mnemonic-label">${visual.originTag}</span>
+                  <div class="vocab-mnemonic-story">${visual.story}</div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+      }
+    }
+
+    function gradeCurrent(mode) {
+      const card = getCurrentCard();
+      if (!card) return;
+      const userInput = document.getElementById("pronInput").value;
+      state.records[card.uid] = {
+        ...(state.records[card.uid] || {}),
+        userInput,
+        updatedAt: Date.now()
+      };
+      saveState();
+      showExplanation(card, userInput, mode);
+    }
+
+    function moveCard(delta) {
+      const list = getScopedCards();
+      if (!list.length) return;
+      const cur = getCurrentCard();
+      const idx = cur ? list.findIndex((c) => c.uid === cur.uid) : 0;
+      const next = list[(idx + delta + list.length) % list.length];
+      state.currentUid = next.uid;
+      renderCard();
+    }
+
+    function speakSentence() {
+      const card = getCurrentCard();
+      if (!card || !card.jp) return;
+      if (!("speechSynthesis" in window)) {
+        toast("이 브라우저는 음성 합성을 지원하지 않습니다.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(card.jp);
+      u.lang = "ja-JP";
+      u.rate = 0.95;
+      window.speechSynthesis.speak(u);
+    }
+
+    document.getElementById("themeBtn").addEventListener("click", () => {
+      state.theme = state.theme === "dark" ? "light" : "dark";
+      applyTheme();
+      saveState();
+    });
+
+    document.getElementById("exportBtn").addEventListener("click", () => {
+      const dataStr = JSON.stringify({
+        app: "jlpt-n3-keigo-adverb-study",
+        exportedAt: new Date().toISOString(),
+        records: state.records
+      }, null, 2);
+      const blob = new Blob([dataStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "jlpt-n3-keigo-adverb-records.json";
+      a.click();
+      URL.revokeObjectURL(url);
+      toast("학습 기록 JSON을 내보냈습니다.");
+    });
+
+    document.getElementById("importFile").addEventListener("change", (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(String(reader.result || "{}"));
+          if (parsed && parsed.records && typeof parsed.records === "object") {
+            state.records = parsed.records;
+            saveState();
+            renderCard();
+            toast("학습 기록을 가져왔습니다.");
+          } else {
+            toast("올바른 기록 JSON 형식이 아닙니다.");
+          }
+        } catch (err) {
+          toast("JSON 파일을 읽는 중 오류가 발생했습니다.");
+        }
+        e.target.value = "";
+      };
+      reader.readAsText(file, "utf-8");
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      state.records = {};
+      saveState();
+      renderCard();
+      toast("모든 학습 기록과 오답노트를 초기화했습니다.");
+    });
+
+    document.getElementById("scopeSelect").addEventListener("change", (e) => {
+      state.scope = e.target.value;
+      renderCard();
+    });
+
+    document.getElementById("questionSelect").addEventListener("change", (e) => {
+      if (!e.target.value) return;
+      state.currentUid = e.target.value;
+      renderCard();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      state.search = e.target.value;
+      renderCard();
+    });
+
+    document.getElementById("randomBtn").addEventListener("click", () => {
+      const list = getScopedCards();
+      if (!list.length) {
+        toast("랜덤 선택할 문항이 없습니다.");
+        return;
+      }
+      const picked = list[Math.floor(Math.random() * list.length)];
+      state.currentUid = picked.uid;
+      renderCard();
+    });
+
+    document.querySelectorAll(".quick-mark-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const input = document.getElementById("pronInput");
+        const ch = btn.dataset.char || "";
+        const s = input.selectionStart ?? input.value.length;
+        const ePos = input.selectionEnd ?? input.value.length;
+        input.value = input.value.slice(0, s) + ch + input.value.slice(ePos);
+        input.focus();
+        input.setSelectionRange(s + ch.length, s + ch.length);
+      });
+    });
+
+    document.getElementById("gradeBtn").addEventListener("click", () => gradeCurrent("grade"));
+    document.getElementById("revealBtn").addEventListener("click", () => gradeCurrent("reveal"));
+    document.getElementById("clearBtn").addEventListener("click", () => {
+      const input = document.getElementById("pronInput");
+      input.value = "";
+      input.focus();
+    });
+
+    document.getElementById("markCorrectBtn").addEventListener("click", () => {
+      const card = getCurrentCard();
+      if (!card) return;
+      setCardStatus(card.uid, "correct", document.getElementById("pronInput").value);
+      toast("정답으로 처리했습니다.");
+    });
+
+    document.getElementById("markWrongBtn").addEventListener("click", () => {
+      const card = getCurrentCard();
+      if (!card) return;
+      setCardStatus(card.uid, "wrong", document.getElementById("pronInput").value);
+      toast("오답 복습 목록에 추가했습니다.");
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => moveCard(-1));
+    document.getElementById("nextBtn").addEventListener("click", () => moveCard(1));
+    document.getElementById("speakBtn").addEventListener("click", speakSentence);
+    document.getElementById("promptJp").addEventListener("dblclick", speakSentence);
+    document.getElementById("toggleMnemonicBtn").addEventListener("click", (e) => {
+      const listEl = document.getElementById("expVocabList");
+      const hidden = listEl.classList.toggle("hidden-mnemonics");
+      e.currentTarget.textContent = hidden ? "한자연상 연상기억 보기" : "한자연상 연상기억 숨기기";
+    });
+
+    document.getElementById("pronInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        gradeCurrent("grade");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      const tag = document.activeElement ? document.activeElement.tagName : "";
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+
+      if (e.code === "Space") {
+        e.preventDefault();
+        const box = document.getElementById("resultBox");
+        if (box.classList.contains("hidden")) {
+          gradeCurrent("reveal");
+        } else {
+          box.classList.add("hidden");
+        }
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        moveCard(-1);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        moveCard(1);
+      }
+    });
+
+    document.getElementById("scopeSelect").value = state.scope;
+    document.getElementById("searchInput").value = state.search;
+    applyTheme();
+    renderCard();
+  </script>
+</body>
+</html>
